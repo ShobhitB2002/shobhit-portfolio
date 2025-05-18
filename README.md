@@ -26,10 +26,9 @@ While my primary focus is mobile app development, I wanted to create a professio
 Honestly, I had **no prior experience with web development**, but I challenged myself to build this portfolio from scratch. Here's how I approached it:
 
 1. **Used ChatGPT** to generate starter code in React + Tailwind.
-2. **Learned basic Git & GitHub** to push my project as a public repo.
-3. **Used Vercel** for free and easy deployment of the site.
-4. Iteratively asked ChatGPT for feature tweaks (like animations, icons, background images, etc.) and **learned by doing**.
-5. Finalized the layout, design, and responsiveness based on real-time feedback and experimentation.
+2. **Used Vercel** for free and easy deployment of the site.
+3. Iteratively added feature tweaks (like animations, icons, background images, etc.) and **learned by doing**.
+4. Finalized the layout, design, and responsiveness based on real-time feedback and experimentation.
 
 ---
 
@@ -70,7 +69,6 @@ Big thanks to:
 ## What I Learned
 
 - Web basics (JSX, CSS, Tailwind, React components)
-- Git & GitHub workflows
 - Deploying a React app on Vercel
 - How frontend dev differs from iOS dev
 
