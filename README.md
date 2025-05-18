@@ -1,18 +1,18 @@
-# 🌐 My Personal Portfolio Website
+# My Personal Portfolio Website
 
 This is the codebase for my personal developer portfolio website:  
 **[shobhit-portfolio.vercel.app](https://shobhit-portfolio.vercel.app/)**
 
 ---
 
-## 🧑‍💻 About Me
+## About Me
 
 I’m **Shobhit Bansal**, an iOS Developer with 1 year of real-world experience using **Swift**, **UIKit**, **MVVM**, **BLE**, **CoreData**, and more.  
 While my primary focus is mobile app development, I wanted to create a professional portfolio website to showcase my work and growth.
 
 ---
 
-## 🛠️ Tech Stack Used
+##  Tech Stack Used
 
 - **React** (CRA-based single-page app)
 - **Tailwind CSS** for styling
@@ -21,7 +21,7 @@ While my primary focus is mobile app development, I wanted to create a professio
 
 ---
 
-## 📚 How I Built This (as an iOS Dev)
+## How I Built This (as an iOS Dev)
 
 Honestly, I had **no prior experience with web development**, but I challenged myself to build this portfolio from scratch. Here's how I approached it:
 
@@ -33,13 +33,7 @@ Honestly, I had **no prior experience with web development**, but I challenged m
 
 ---
 
-## 🔗 Live Website
-
-👉 [https://shobhit-portfolio.vercel.app](https://shobhit-portfolio.vercel.app)
-
----
-
-## 📸 Features
+## Features
 
 - Clean & simple Hero section with profile and intro.
 - Timeline of my iOS dev journey.
@@ -64,7 +58,7 @@ Honestly, I had **no prior experience with web development**, but I challenged m
 
 ---
 
-## 🤝 Credits
+## Credits
 
 Big thanks to:
 - **ChatGPT** for helping me understand and build every part of this.
@@ -73,7 +67,7 @@ Big thanks to:
 
 ---
 
-## 🧠 What I Learned
+## What I Learned
 
 - Web basics (JSX, CSS, Tailwind, React components)
 - Git & GitHub workflows
@@ -82,7 +76,7 @@ Big thanks to:
 
 ---
 
-## 📬 Contact Me
+## Contact Me
 
 - **Email**: [shobhitbansal.chd@gmail.com](mailto:shobhitbansal.chd@gmail.com)  
 - **LinkedIn**: [shobhitbansal2002](https://www.linkedin.com/in/shobhitbansal2002)  
