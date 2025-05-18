@@ -38,16 +38,7 @@ export default function App() {
       <section className="px-6 py-12 bg-zinc-800 max-w-3xl mx-auto rounded-md shadow-md">
         <h2 className="text-2xl font-bold mb-6 text-cyan-300">🛠️ Skills</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {[
-            "Swift",
-            "UIKit",
-            "MVVM",
-            "CoreData",
-            "BLE",
-            "SourceTree",
-            "Asana",
-            "GitHub",
-          ].map((skill) => (
+          {["Swift", "UIKit", "MVVM", "CoreData", "BLE", "SourceTree", "Asana", "GitHub"].map((skill) => (
             <li
               key={skill}
               className="bg-zinc-700 rounded-lg py-3 text-center text-white font-medium hover:bg-cyan-600 transition-colors cursor-default select-none"
@@ -109,7 +100,7 @@ export default function App() {
             <FaEnvelope className="text-red-500 text-lg" />
             <a
               href="mailto:shobhitbansal.chd@gmail.com"
-              className="hover:underline text-sm"
+              className="hover:underline text-sm select-none cursor-pointer"
             >
               shobhitbansal.chd@gmail.com
             </a>
@@ -120,9 +111,9 @@ export default function App() {
               href="https://www.linkedin.com/in/shobhitbansal2002"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-sm"
+              className="hover:underline text-sm select-none cursor-pointer"
             >
-              linkedin.com/in/shobhitbansal2002
+              shobhitbansal2002
             </a>
           </div>
           <div className="flex items-center space-x-3">
@@ -131,9 +122,9 @@ export default function App() {
               href="https://github.com/ShobhitB2002"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-sm"
+              className="hover:underline text-sm select-none cursor-pointer"
             >
-              github.com/ShobhitB2002
+              ShobhitB2002
             </a>
           </div>
         </div>
