@@ -1,4 +1,5 @@
 import React from "react";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 px-6 py-2 bg-cyan-600 rounded hover:bg-cyan-500 text-white transition"
+          className="mt-4 px-6 py-2 bg-cyan-600 rounded hover:bg-cyan-500 text-white"
         >
           📄 Download My Resume
         </a>
@@ -34,17 +35,17 @@ export default function App() {
       </section>
 
       {/* Skills */}
-      <section className="px-6 py-12 bg-zinc-800 max-w-3xl mx-auto rounded-md shadow-md">
-        <h2 className="text-2xl font-bold mb-6 text-cyan-300">🛠️ Skills</h2>
-        <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {["Swift", "UIKit", "MVVM", "CoreData", "BLE", "SourceTree", "Asana", "GitHub"].map((skill) => (
-            <li
-              key={skill}
-              className="bg-zinc-700 rounded-lg py-3 text-center text-white font-medium hover:bg-cyan-600 transition-colors cursor-default select-none"
-            >
-              {skill}
-            </li>
-          ))}
+      <section className="px-6 py-12 bg-zinc-800">
+        <h2 className="text-2xl font-bold mb-4 text-cyan-300">🛠️ Skills</h2>
+        <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <li>Swift</li>
+          <li>UIKit</li>
+          <li>MVVM</li>
+          <li>CoreData</li>
+          <li>BLE</li>
+          <li>SourceTree</li>
+          <li>Asana</li>
+          <li>GitHub</li>
         </ul>
       </section>
 
@@ -52,7 +53,7 @@ export default function App() {
       <section className="px-6 py-12 max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold mb-4 text-cyan-300">💼 Projects</h2>
         <div className="space-y-6">
-          <div className="bg-zinc-800 p-4 rounded-md shadow hover:shadow-lg transition-shadow">
+          <div>
             <h3 className="text-xl font-semibold">EmployeeDatabase – iOS App</h3>
             <p className="text-sm text-zinc-400">
               A Core Data-based employee manager app with clean MVC architecture.
@@ -60,7 +61,7 @@ export default function App() {
             <a
               href="https://github.com/ShobhitB2002/EmployeeDatabase-iOS"
               target="_blank"
-              className="text-cyan-400 underline hover:text-cyan-300"
+              className="text-cyan-400 underline"
               rel="noopener noreferrer"
             >
               View on GitHub
@@ -70,48 +71,60 @@ export default function App() {
       </section>
 
       {/* Timeline */}
-      <section className="px-6 py-12 bg-zinc-800 max-w-3xl mx-auto rounded-md shadow-md">
-        <h2 className="text-2xl font-bold mb-6 text-cyan-300">📆 Timeline</h2>
-        <ol className="relative border-l-2 border-cyan-400 pl-6">
-          <li className="mb-8">
-            <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
-            <p className="text-cyan-400 font-semibold">2023</p>
-            <p>Joined current company as iOS Developer (Swift, UIKit, BLE)</p>
+      <section className="px-6 py-12 bg-zinc-800">
+        <h2 className="text-2xl font-bold mb-4 text-cyan-300">📆 Timeline</h2>
+        <ul className="space-y-4 text-sm">
+          <li>
+            <span className="text-cyan-400">2023:</span> Joined current company as iOS Developer
+            (Swift, UIKit, BLE)
           </li>
-          <li className="mb-8">
-            <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
-            <p className="text-cyan-400 font-semibold">2024</p>
-            <p>Delivered multiple iOS apps to App Store (Kodak, Polaroid)</p>
+          <li>
+            <span className="text-cyan-400">2024:</span> Delivered multiple iOS apps to App Store
+            (Kodak, Polaroid)
           </li>
-          <li className="mb-8">
-            <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
-            <p className="text-cyan-400 font-semibold">2025</p>
-            <p>Preparing for product-based transition (SwiftUI, GitHub, Portfolio)</p>
+          <li>
+            <span className="text-cyan-400">2025:</span> Preparing for product-based transition
+            (SwiftUI, GitHub, Portfolio)
           </li>
-        </ol>
+        </ul>
       </section>
 
       {/* Contact */}
       <section className="px-6 py-12 text-center">
         <h2 className="text-2xl font-bold mb-4 text-cyan-300">📫 Contact</h2>
-        <p>
-          Email:{" "}
-          <a href="mailto:shobhitbansal.chd@gmail.com" className="text-cyan-400 hover:underline">
-            shobhitbansal.chd@gmail.com
-          </a>
-        </p>
-        <p>
-          LinkedIn:{" "}
-          <a href="https://www.linkedin.com/in/shobhitbansal2002" className="text-cyan-400 hover:underline">
-            shobhitbansal2002
-          </a>
-        </p>
-        <p>
-          GitHub:{" "}
-          <a href="https://github.com/ShobhitB2002" className="text-cyan-400 hover:underline">
-            ShobhitB2002
-          </a>
-        </p>
+        <div className="flex flex-col items-center space-y-3">
+          <div className="flex items-center space-x-2">
+            <FaEnvelope className="text-cyan-400" />
+            <a
+              href="mailto:shobhitbansal.chd@gmail.com"
+              className="text-cyan-400 hover:underline"
+            >
+              shobhitbansal.chd@gmail.com
+            </a>
+          </div>
+          <div className="flex items-center space-x-2">
+            <FaLinkedin className="text-cyan-400" />
+            <a
+              href="https://www.linkedin.com/in/shobhitbansal2002"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 hover:underline"
+            >
+              linkedin.com/in/shobhitbansal2002
+            </a>
+          </div>
+          <div className="flex items-center space-x-2">
+            <FaGithub className="text-cyan-400" />
+            <a
+              href="https://github.com/ShobhitB2002"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 hover:underline"
+            >
+              github.com/ShobhitB2002
+            </a>
+          </div>
+        </div>
       </section>
 
       <footer className="text-center text-zinc-500 py-6 text-sm">
