@@ -10,7 +10,7 @@ export default function App() {
       style={{ backgroundImage: "url('/background.jpg')" }}
     >
       {/* Overlay for subtle dark tint (optional) */}
-      <div className="min-h-screen bg-black bg-opacity-40">
+      <div className="min-h-screen bg-black bg-opacity-0">
         {/* Main content container */}
         <div className="bg-zinc-900 bg-opacity-90 text-white min-h-screen font-sans select-none" onContextMenu={e => e.preventDefault()}>
           {/* Hero Section */}
