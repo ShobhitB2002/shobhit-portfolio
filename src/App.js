@@ -1,15 +1,24 @@
-import React from "react";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import React, { useEffect } from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function App() {
+  useEffect(() => {
+    const handleContextMenu = (e) => e.preventDefault();
+    document.addEventListener("contextmenu", handleContextMenu);
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
+
   return (
-    <div className="bg-zinc-900 text-white min-h-screen font-sans">
+    <div className="bg-zinc-900 text-white min-h-screen font-sans select-none">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center py-20 px-4">
         <img
           src="/profile.jpg"
           alt="Shobhit Bansal"
-          className="w-40 h-40 rounded-full border-4 border-cyan-400 mb-6"
+          className="w-40 h-40 rounded-full border-4 border-cyan-400 mb-6 pointer-events-none"
+          draggable={false}
         />
         <h1 className="text-4xl font-bold text-cyan-400">Hi, I’m Shobhit Bansal</h1>
         <p className="text-xl mt-2">Just a guy with Swift and a dream.</p>
@@ -38,16 +47,7 @@ export default function App() {
       <section className="px-6 py-12 bg-zinc-800 max-w-3xl mx-auto rounded-md shadow-md">
         <h2 className="text-2xl font-bold mb-6 text-cyan-300">🛠️ Skills</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {[
-            "Swift",
-            "UIKit",
-            "MVVM",
-            "CoreData",
-            "BLE",
-            "SourceTree",
-            "Asana",
-            "GitHub",
-          ].map((skill) => (
+          {["Swift", "UIKit", "MVVM", "CoreData", "BLE", "SourceTree", "Asana", "GitHub"].map((skill) => (
             <li
               key={skill}
               className="bg-zinc-700 rounded-lg py-3 text-center text-white font-medium hover:bg-cyan-600 transition-colors cursor-default select-none"
@@ -104,36 +104,33 @@ export default function App() {
       {/* Contact */}
       <section className="px-6 py-12 text-center">
         <h2 className="text-2xl font-bold mb-4 text-cyan-300">📫 Contact</h2>
-        <div className="flex flex-col items-center space-y-4">
-          <div className="flex items-center space-x-3">
-            <FaEnvelope className="text-red-500 text-lg" />
-            <a
-              href="mailto:shobhitbansal.chd@gmail.com"
-              className="hover:underline text-sm"
-            >
+        <div className="flex flex-col items-center space-y-3 text-lg">
+          <div className="flex items-center gap-2">
+            <FaEnvelope className="text-white" />
+            <a href="mailto:shobhitbansal.chd@gmail.com" className="text-cyan-400 hover:underline">
               shobhitbansal.chd@gmail.com
             </a>
           </div>
-          <div className="flex items-center space-x-3">
-            <FaLinkedin className="text-blue-600 text-lg" />
+          <div className="flex items-center gap-2">
+            <FaLinkedin className="text-white" />
             <a
               href="https://www.linkedin.com/in/shobhitbansal2002"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-sm"
+              className="text-cyan-400 hover:underline"
             >
-              linkedin.com/in/shobhitbansal2002
+              shobhitbansal2002
             </a>
           </div>
-          <div className="flex items-center space-x-3">
-            <FaGithub className="text-white text-lg" />
+          <div className="flex items-center gap-2">
+            <FaGithub className="text-white" />
             <a
               href="https://github.com/ShobhitB2002"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-sm"
+              className="text-cyan-400 hover:underline"
             >
-              github.com/ShobhitB2002
+              ShobhitB2002
             </a>
           </div>
         </div>
