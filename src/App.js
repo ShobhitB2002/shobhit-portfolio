@@ -1,4 +1,5 @@
 import React from "react";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function App() {
   return (
@@ -37,7 +38,16 @@ export default function App() {
       <section className="px-6 py-12 bg-zinc-800 max-w-3xl mx-auto rounded-md shadow-md">
         <h2 className="text-2xl font-bold mb-6 text-cyan-300">🛠️ Skills</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {["Swift", "UIKit", "MVVM", "CoreData", "BLE", "SourceTree", "Asana", "GitHub"].map((skill) => (
+          {[
+            "Swift",
+            "UIKit",
+            "MVVM",
+            "CoreData",
+            "BLE",
+            "SourceTree",
+            "Asana",
+            "GitHub",
+          ].map((skill) => (
             <li
               key={skill}
               className="bg-zinc-700 rounded-lg py-3 text-center text-white font-medium hover:bg-cyan-600 transition-colors cursor-default select-none"
@@ -94,24 +104,39 @@ export default function App() {
       {/* Contact */}
       <section className="px-6 py-12 text-center">
         <h2 className="text-2xl font-bold mb-4 text-cyan-300">📫 Contact</h2>
-        <p>
-          Email:{" "}
-          <a href="mailto:shobhitbansal.chd@gmail.com" className="text-cyan-400 hover:underline">
-            shobhitbansal.chd@gmail.com
-          </a>
-        </p>
-        <p>
-          LinkedIn:{" "}
-          <a href="https://www.linkedin.com/in/shobhitbansal2002" className="text-cyan-400 hover:underline">
-            shobhitbansal2002
-          </a>
-        </p>
-        <p>
-          GitHub:{" "}
-          <a href="https://github.com/ShobhitB2002" className="text-cyan-400 hover:underline">
-            ShobhitB2002
-          </a>
-        </p>
+        <div className="flex flex-col items-center space-y-4">
+          <div className="flex items-center space-x-3">
+            <FaEnvelope className="text-red-500 text-lg" />
+            <a
+              href="mailto:shobhitbansal.chd@gmail.com"
+              className="hover:underline text-sm"
+            >
+              shobhitbansal.chd@gmail.com
+            </a>
+          </div>
+          <div className="flex items-center space-x-3">
+            <FaLinkedin className="text-blue-600 text-lg" />
+            <a
+              href="https://www.linkedin.com/in/shobhitbansal2002"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline text-sm"
+            >
+              linkedin.com/in/shobhitbansal2002
+            </a>
+          </div>
+          <div className="flex items-center space-x-3">
+            <FaGithub className="text-white text-lg" />
+            <a
+              href="https://github.com/ShobhitB2002"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline text-sm"
+            >
+              github.com/ShobhitB2002
+            </a>
+          </div>
+        </div>
       </section>
 
       <footer className="text-center text-zinc-500 py-6 text-sm">
