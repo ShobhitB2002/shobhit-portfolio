@@ -18,7 +18,7 @@ export default function App() {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 px-6 py-2 bg-cyan-600 rounded hover:bg-cyan-500 text-white"
+          className="mt-4 px-6 py-2 bg-cyan-600 rounded hover:bg-cyan-500 text-white transition"
         >
           📄 Download My Resume
         </a>
@@ -35,11 +35,9 @@ export default function App() {
       </section>
 
       {/* Skills */}
-      <section className="px-6 py-12 bg-zinc-800">
-        <h2 className="text-2xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-400 text-transparent bg-clip-text">
-          🛠️ Skills
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+      <section className="px-6 py-12 bg-zinc-800 max-w-3xl mx-auto rounded-md shadow-md">
+        <h2 className="text-2xl font-bold mb-6 text-cyan-300">🛠️ Skills</h2>
+        <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[
             "Swift",
             "UIKit",
@@ -49,31 +47,30 @@ export default function App() {
             "SourceTree",
             "Asana",
             "GitHub",
-            "Firebase",
           ].map((skill) => (
-            <div
+            <li
               key={skill}
-              className="bg-zinc-700 rounded-xl shadow-lg p-4 text-center font-semibold"
+              className="bg-zinc-700 rounded-lg py-3 text-center text-white font-medium hover:bg-cyan-600 transition-colors cursor-default select-none"
             >
               {skill}
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       {/* Projects */}
       <section className="px-6 py-12 max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold mb-4 text-cyan-300">💼 Projects</h2>
         <div className="space-y-6">
-          <div className="bg-zinc-800 rounded-lg p-6 shadow">
-            <h3 className="text-xl font-semibold text-cyan-200">EmployeeDatabase – iOS App</h3>
+          <div className="bg-zinc-800 p-4 rounded-md shadow hover:shadow-lg transition-shadow">
+            <h3 className="text-xl font-semibold">EmployeeDatabase – iOS App</h3>
             <p className="text-sm text-zinc-400">
               A Core Data-based employee manager app with clean MVC architecture.
             </p>
             <a
               href="https://github.com/ShobhitB2002/EmployeeDatabase-iOS"
               target="_blank"
-              className="text-cyan-400 underline"
+              className="text-cyan-400 underline hover:text-cyan-300"
               rel="noopener noreferrer"
             >
               View on GitHub
@@ -83,41 +80,30 @@ export default function App() {
       </section>
 
       {/* Timeline */}
-      <section className="px-6 py-12 bg-zinc-900">
-        <h2 className="text-2xl font-bold mb-8 bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">
-          📆 Timeline
-        </h2>
-        <div className="space-y-6 max-w-2xl mx-auto">
-          {[
-            {
-              year: "2023",
-              detail: "Joined current company as iOS Developer (Swift, UIKit, BLE)",
-            },
-            {
-              year: "2024",
-              detail: "Delivered multiple iOS apps to App Store (Kodak, Polaroid)",
-            },
-            {
-              year: "2025",
-              detail: "Preparing for product-based transition (SwiftUI, GitHub, Portfolio)",
-            },
-          ].map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-zinc-800 rounded-xl p-4 shadow-md flex items-start gap-4"
-            >
-              <div className="text-cyan-400 font-bold text-lg min-w-[60px]">
-                {item.year}
-              </div>
-              <div className="text-sm">{item.detail}</div>
-            </div>
-          ))}
-        </div>
+      <section className="px-6 py-12 bg-zinc-800 max-w-3xl mx-auto rounded-md shadow-md">
+        <h2 className="text-2xl font-bold mb-6 text-cyan-300">📆 Timeline</h2>
+        <ol className="relative border-l-2 border-cyan-400 pl-6">
+          <li className="mb-8">
+            <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
+            <p className="text-cyan-400 font-semibold">2023</p>
+            <p>Joined current company as iOS Developer (Swift, UIKit, BLE)</p>
+          </li>
+          <li className="mb-8">
+            <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
+            <p className="text-cyan-400 font-semibold">2024</p>
+            <p>Delivered multiple iOS apps to App Store (Kodak, Polaroid)</p>
+          </li>
+          <li className="mb-8">
+            <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
+            <p className="text-cyan-400 font-semibold">2025</p>
+            <p>Preparing for product-based transition (SwiftUI, GitHub, Portfolio)</p>
+          </li>
+        </ol>
       </section>
 
       {/* Contact */}
       <section className="px-6 py-12 text-center">
-        <h2 className="text-2xl font-bold mb-6 text-cyan-300">📫 Contact</h2>
+        <h2 className="text-2xl font-bold mb-4 text-cyan-300">📫 Contact</h2>
         <div className="flex flex-col items-center space-y-4">
           <div className="flex items-center space-x-3">
             <FaEnvelope className="text-red-500 text-lg" />
