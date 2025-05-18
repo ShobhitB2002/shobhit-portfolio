@@ -9,9 +9,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Prevent text selection and copying */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  /* Disable right-click globally (also handled in JS for redundancy) */
+  -webkit-touch-callout: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Prevent dragging of images */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
 }
