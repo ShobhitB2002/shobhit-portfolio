@@ -3,89 +3,129 @@ import React from "react";
 export default function App() {
   return (
     <div className="bg-zinc-900 text-white min-h-screen font-sans">
-      {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center py-20 px-4">
-        <img
-          src="/profile.jpg"
-          alt="Shobhit Bansal"
-          className="w-40 h-40 rounded-full border-4 border-cyan-400 mb-6"
-        />
-        <h1 className="text-4xl font-bold text-cyan-400">Hi, I’m Shobhit Bansal</h1>
-        <p className="text-xl mt-2">Just a guy with Swift and a dream.</p>
-        <p className="text-xl">iOS Dev. Storyboard veteran. UIKit loyalist.</p>
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 px-6 py-2 bg-cyan-600 rounded hover:bg-cyan-500 text-white"
-        >
-          📄 Download My Resume
-        </a>
-      </section>
+      <main>
+        {/* Hero Section */}
+        <section className="flex flex-col items-center justify-center text-center py-20 px-4">
+          <img
+            src="/profile.jpg"
+            alt="Shobhit Bansal"
+            className="w-40 h-40 rounded-full border-4 border-cyan-400 mb-6"
+          />
+          <h1 className="text-4xl font-bold text-cyan-400">Hi, I’m Shobhit Bansal</h1>
+          <p className="text-xl mt-2">Just a guy with Swift and a dream.</p>
+          <p className="text-xl">iOS Dev. Storyboard veteran. UIKit loyalist.</p>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 px-6 py-2 bg-cyan-600 rounded hover:bg-cyan-500 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          >
+            📄 Download My Resume
+          </a>
+        </section>
 
-      {/* About Me */}
-      <section className="px-6 py-12 max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4 text-cyan-300">📘 About Me</h2>
-        <p>
-          I’m an iOS Developer with 1 year of experience building production-ready apps using Swift,
-          UIKit, MVVM, Core Data, and Firebase. I’ve worked on real-world apps and value clean code,
-          attention to detail, and solving meaningful problems through tech.
-        </p>
-      </section>
+        {/* About Me */}
+        <section className="px-6 py-12 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4 text-cyan-300">📘 About Me</h2>
+          <p>
+            I’m an iOS Developer with 1 year of experience building production-ready apps using Swift,
+            UIKit, MVVM, Core Data, and Firebase. I’ve worked on real-world apps and value clean code,
+            attention to detail, and solving meaningful problems through tech.
+          </p>
+        </section>
 
-      {/* Skills */}
-      <section className="px-6 py-12 bg-zinc-800">
-        <h2 className="text-2xl font-bold mb-4 text-cyan-300">🛠️ Skills</h2>
-        <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          <li>Swift</li>
-          <li>UIKit</li>
-          <li>MVVM</li>
-          <li>CoreData</li>
-          <li>BLE</li>
-          <li>SourceTree</li>
-          <li>Asana</li>
-          <li>GitHub</li>
-        </ul>
-      </section>
+        {/* Skills */}
+        <section className="px-6 py-12 bg-zinc-800">
+          <h2 className="text-2xl font-bold mb-4 text-cyan-300">🛠️ Skills</h2>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <li>Swift</li>
+            <li>UIKit</li>
+            <li>MVVM</li>
+            <li>CoreData</li>
+            <li>BLE</li>
+            <li>SourceTree</li>
+            <li>Asana</li>
+            <li>GitHub</li>
+          </ul>
+        </section>
 
-      {/* Projects */}
-      <section className="px-6 py-12 max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4 text-cyan-300">💼 Projects</h2>
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-xl font-semibold">EmployeeDatabase – iOS App</h3>
-            <p className="text-sm text-zinc-400">A Core Data-based employee manager app with clean MVC architecture.</p>
+        {/* Projects */}
+        <section className="px-6 py-12 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4 text-cyan-300">💼 Projects</h2>
+          <div className="space-y-6">
+            <div className="bg-zinc-700 p-4 rounded-md shadow-md">
+              <h3 className="text-xl font-semibold mb-1">EmployeeDatabase – iOS App</h3>
+              <p className="text-sm text-zinc-300 mb-2">
+                A Core Data-based employee manager app with clean MVC architecture.
+              </p>
+              <a
+                href="https://github.com/ShobhitB2002/EmployeeDatabase-iOS"
+                target="_blank"
+                className="text-cyan-400 underline hover:text-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Timeline */}
+        <section className="px-6 py-12 bg-zinc-800">
+          <h2 className="text-2xl font-bold mb-4 text-cyan-300">📆 Timeline</h2>
+          <ul className="space-y-4 text-sm">
+            <li>
+              <span className="text-cyan-400">2023:</span> Joined current company as iOS Developer (Swift, UIKit, BLE)
+            </li>
+            <li>
+              <span className="text-cyan-400">2024:</span> Delivered multiple iOS apps to App Store (Kodak, Polaroid)
+            </li>
+            <li>
+              <span className="text-cyan-400">2025:</span> Preparing for product-based transition (SwiftUI, GitHub, Portfolio)
+            </li>
+          </ul>
+        </section>
+
+        {/* Contact */}
+        <section className="px-6 py-12 text-center">
+          <h2 className="text-2xl font-bold mb-4 text-cyan-300">📫 Contact</h2>
+          <p>
+            Email:{" "}
             <a
-              href="https://github.com/ShobhitB2002/EmployeeDatabase-iOS"
+              href="mailto:shobhitbansal.chd@gmail.com"
+              className="text-cyan-400 underline hover:text-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded"
+            >
+              shobhitbansal.chd@gmail.com
+            </a>
+          </p>
+          <p>
+            LinkedIn:{" "}
+            <a
+              href="https://www.linkedin.com/in/shobhitbansal2002"
+              className="text-cyan-400 underline hover:text-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded"
               target="_blank"
-              className="text-cyan-400 underline"
               rel="noopener noreferrer"
             >
-              View on GitHub
+              shobhitbansal2002
             </a>
-          </div>
-        </div>
-      </section>
+          </p>
+          <p>
+            GitHub:{" "}
+            <a
+              href="https://github.com/ShobhitB2002"
+              className="text-cyan-400 underline hover:text-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ShobhitB2002
+            </a>
+          </p>
+        </section>
+      </main>
 
-      {/* Timeline */}
-      <section className="px-6 py-12 bg-zinc-800">
-        <h2 className="text-2xl font-bold mb-4 text-cyan-300">📆 Timeline</h2>
-        <ul className="space-y-4 text-sm">
-          <li><span className="text-cyan-400">2023:</span> Joined current company as iOS Developer (Swift, UIKit, BLE)</li>
-          <li><span className="text-cyan-400">2024:</span> Delivered multiple iOS apps to App Store (Kodak, Polaroid)</li>
-          <li><span className="text-cyan-400">2025:</span> Preparing for product-based transition (SwiftUI, GitHub, Portfolio)</li>
-        </ul>
-      </section>
-
-      {/* Contact */}
-      <section className="px-6 py-12 text-center">
-        <h2 className="text-2xl font-bold mb-4 text-cyan-300">📫 Contact</h2>
-        <p>Email: <a href="mailto:shobhitbansal.chd@gmail.com" className="text-cyan-400">shobhitbansal.chd@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/shobhitbansal2002" className="text-cyan-400">shobhitbansal2002</a></p>
-        <p>GitHub: <a href="https://github.com/ShobhitB2002" className="text-cyan-400">ShobhitB2002</a></p>
-      </section>
-
-      <footer className="text-center text-zinc-500 py-6 text-sm">© 2025 Shobhit Bansal. All rights reserved.</footer>
+      <footer className="text-center text-zinc-500 py-6 text-sm">
+        © 2025 Shobhit Bansal. All rights reserved.
+      </footer>
     </div>
   );
 }
