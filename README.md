@@ -74,6 +74,10 @@ Big thanks to:
 
 ---
 
+This is a work-in-progress portfolio built from scratch — inspired by clean design, focused content, and a logic-first mindset.
+
+---
+
 ## Contact Me
 
 - **Email**: [shobhitbansal.chd@gmail.com](mailto:shobhitbansal.chd@gmail.com)  
