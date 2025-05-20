@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 export default function App() {
   return (
     <div
-      className="bg-cover bg-center min-h-screen text-white font-sans"
+      className="min-h-screen bg-cover bg-center bg-fixed"
       style={{ backgroundImage: "url('/background.jpg')" }}
     >
       <div className="bg-black bg-opacity-70 min-h-screen">
