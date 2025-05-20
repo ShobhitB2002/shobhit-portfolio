@@ -88,7 +88,7 @@ export default function App() {
           </section>
 
                 {/* Education */}
-      <section className="px-6 py-12 max-w-3xl mx-auto bg-zinc-800 rounded-md shadow-md">
+      <section className="px-6 py-12 max-w-3xl mx-auto bg-zinc-800 rounded-md shadow-md mb-12">
         <h2 className="text-2xl font-bold mb-6 text-cyan-300">🎓 Education</h2>
         <ul className="space-y-4">
           <li>
@@ -99,7 +99,7 @@ export default function App() {
       </section>
 
           {/* Timeline */}
-          <section className="px-6 py-12 bg-zinc-800 bg-opacity-90 max-w-3xl mx-auto rounded-md shadow-md">
+          <section className="px-6 py-12 bg-zinc-800 bg-opacity-90 max-w-3xl mx-auto rounded-md shadow-md mt-12">
             <h2 className="text-2xl font-bold mb-6 text-cyan-300">📆 Timeline</h2>
             <ol className="relative border-l-2 border-cyan-400 pl-6">
               <li className="mb-8">
