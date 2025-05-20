@@ -87,14 +87,16 @@ export default function App() {
             </div>
           </section>
 
-          {/* Education */}
-          <section className="px-6 py-12 max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-300">🎓 Education</h2>
-            <ul className="list-disc list-inside text-zinc-300 space-y-2">
-              <li>Swami Vivekanand Institute of Engineering & Technology</li>
-              <li>Bachelor of Computer Applications (2021–2024)</li>
-            </ul>
-          </section>
+                {/* Education */}
+      <section className="px-6 py-12 max-w-3xl mx-auto bg-zinc-800 rounded-md shadow-md">
+        <h2 className="text-2xl font-bold mb-6 text-cyan-300">🎓 Education</h2>
+        <ul className="space-y-4">
+          <li>
+            <p className="font-semibold text-cyan-400">Swami Vivekanand Institute of Engineering & Technology, Punjab, India</p>
+            <p>Bachelor of Computer Applications (BCA), 2020 – 2023</p>
+          </li>
+        </ul>
+      </section>
 
           {/* Timeline */}
           <section className="px-6 py-12 bg-zinc-800 bg-opacity-90 max-w-3xl mx-auto rounded-md shadow-md">
