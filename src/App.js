@@ -4,12 +4,10 @@ import { MdEmail } from "react-icons/md";
 
 export default function App() {
   return (
-    // Background wrapper with fixed full cover image
     <div
       className="min-h-screen bg-cover bg-center bg-fixed"
       style={{ backgroundImage: "url('/background.jpg')" }}
     >
-      {/* Overlay to improve readability */}
       <div className="min-h-screen">
         <div
           className="bg-zinc-900 bg-opacity-90 text-white min-h-screen font-sans select-none"
@@ -42,17 +40,10 @@ export default function App() {
           <section className="px-6 py-12 max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-cyan-300">📘 About Me</h2>
             <p>
-              I’m Shobhit Bansal, an iOS Developer passionate about crafting high-quality mobile experiences.
-              With nearly two years of professional experience, I specialize in building clean, maintainable
-              apps using Swift, UIKit, MVVM, and Core Data.
-            </p>
-            <p className="mt-4">
-              I have contributed to real-world products for brands like Kodak and Polaroid, focusing on features
-              such as AR video integration, Bluetooth device synchronization, and offline data management.
-            </p>
-            <p className="mt-4">
-              Constantly learning and evolving, I’m expanding my skills with SwiftUI and modern app architectures
-              to deliver impactful user-centric solutions.
+              I’m a self-driven iOS Developer with 1 year of experience shipping Swift-based apps.
+              I believe in building clean, purposeful software backed by real-world design patterns like MVVM,
+              and I enjoy learning new technologies when it leads to better user experience or developer velocity.
+              Currently polishing my portfolio and preparing for global product-based roles.
             </p>
           </section>
 
@@ -60,16 +51,7 @@ export default function App() {
           <section className="px-6 py-12 bg-zinc-800 bg-opacity-90 max-w-3xl mx-auto rounded-md shadow-md">
             <h2 className="text-2xl font-bold mb-6 text-cyan-300">🛠️ Skills</h2>
             <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {[
-                "Swift",
-                "UIKit",
-                "MVVM",
-                "Core Data",
-                "BLE",
-                "SourceTree",
-                "Asana",
-                "GitHub",
-              ].map((skill) => (
+              {["Swift", "UIKit", "MVVM", "CoreData", "BLE", "SourceTree", "Asana", "GitHub"].map((skill) => (
                 <li
                   key={skill}
                   className="bg-zinc-700 rounded-lg py-3 text-center text-white font-medium hover:bg-cyan-600 transition-colors cursor-default select-none"
@@ -89,9 +71,6 @@ export default function App() {
                 <p className="text-sm text-zinc-400">
                   A Core Data-based employee manager app with clean MVC architecture.
                 </p>
-                <p className="text-sm text-white mt-2">
-                  <strong>Tech Used:</strong> Swift, UIKit, Core Data, MVC
-                </p>
                 <a
                   href="https://github.com/ShobhitB2002/EmployeeDatabase-iOS"
                   target="_blank"
@@ -100,6 +79,10 @@ export default function App() {
                 >
                   View on GitHub
                 </a>
+                {/* Tech Stack */}
+                <div className="mt-3 text-sm text-zinc-300">
+                  <span className="font-semibold text-cyan-400">Tech Stack:</span> Swift, UIKit, Core Data, MVC
+                </div>
               </div>
             </div>
           </section>
@@ -110,25 +93,30 @@ export default function App() {
             <ol className="relative border-l-2 border-cyan-400 pl-6">
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
-                <p className="text-cyan-400 font-semibold">2023 Jul</p>
-                <p>Joined CS Soft Solutions as iOS Developer Trainee (Swift, UIKit, BLE)</p>
+                <p className="text-cyan-400 font-semibold">2023</p>
+                <p>Joined current company as iOS Developer (Swift, UIKit, BLE)</p>
               </li>
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
-                <p className="text-cyan-400 font-semibold">2023 Dec</p>
-                <p>Completed training at CS Soft Solutions</p>
-              </li>
-              <li className="mb-8">
-                <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
-                <p className="text-cyan-400 font-semibold">2024 Jul</p>
-                <p>Joined C+A Global as iOS Developer, enhanced skills in MVVM, Core Data</p>
+                <p className="text-cyan-400 font-semibold">2024</p>
+                <p>Delivered multiple iOS apps to App Store (Kodak, Polaroid)</p>
               </li>
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
                 <p className="text-cyan-400 font-semibold">2025</p>
-                <p>Currently at C+A Global, contributed to multiple live apps (Kodak, Polaroid)</p>
+                <p>Sharpening portfolio & GitHub for product-based opportunities (SwiftUI, Vrix, Local AI tools)</p>
               </li>
             </ol>
+          </section>
+
+          {/* Education */}
+          <section className="px-6 py-12 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4 text-cyan-300">🎓 Education</h2>
+            <ul className="list-disc list-inside text-zinc-300 space-y-2">
+              <li>Bachelor of Computer Applications – Chandigarh University (2020–2023)</li>
+              <li>Learned C++, DBMS, Data Structures, and Computer Networks</li>
+              <li>Focused on iOS and app development outside the curriculum</li>
+            </ul>
           </section>
 
           {/* Contact */}
@@ -165,7 +153,6 @@ export default function App() {
             </div>
           </section>
 
-          {/* Footer */}
           <footer className="text-center text-zinc-500 py-6 text-sm">
             © 2025 Shobhit Bansal. All rights reserved.
           </footer>
