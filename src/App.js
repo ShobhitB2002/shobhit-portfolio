@@ -87,6 +87,15 @@ export default function App() {
             </div>
           </section>
 
+          {/* Education */}
+          <section className="px-6 py-12 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4 text-cyan-300">🎓 Education</h2>
+            <ul className="list-disc list-inside text-zinc-300 space-y-2">
+              <li>Swami Vivekanand Institute of Engineering & Technology</li>
+              <li>Bachelor of Computer Applications (2021–2024)</li>
+            </ul>
+          </section>
+
           {/* Timeline */}
           <section className="px-6 py-12 bg-zinc-800 bg-opacity-90 max-w-3xl mx-auto rounded-md shadow-md">
             <h2 className="text-2xl font-bold mb-6 text-cyan-300">📆 Timeline</h2>
@@ -107,16 +116,6 @@ export default function App() {
                 <p>Sharpening portfolio & GitHub for product-based opportunities (SwiftUI, Vrix, Local AI tools)</p>
               </li>
             </ol>
-          </section>
-
-          {/* Education */}
-          <section className="px-6 py-12 max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-300">🎓 Education</h2>
-            <ul className="list-disc list-inside text-zinc-300 space-y-2">
-              <li>Bachelor of Computer Applications – Chandigarh University (2020–2023)</li>
-              <li>Learned C++, DBMS, Data Structures, and Computer Networks</li>
-              <li>Focused on iOS and app development outside the curriculum</li>
-            </ul>
           </section>
 
           {/* Contact */}
