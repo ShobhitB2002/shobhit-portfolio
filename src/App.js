@@ -63,58 +63,47 @@ export default function App() {
           </section>
 
           {/* Spoken Languages */}
-          <section className="px-6 py-12 max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-300">🗣️ Spoken Languages</h2>
-            <ul className="space-y-2 text-white">
-              <li><span className="font-semibold text-cyan-400">English:</span> 5 / 5</li>
-              <li><span className="font-semibold text-cyan-400">Hindi:</span> 5 / 5</li>
-            </ul>
-          </section>
+<section className="px-6 py-12 bg-zinc-800 bg-opacity-90 max-w-3xl mx-auto rounded-md shadow-md">
+  <h2 className="text-2xl font-bold mb-6 text-cyan-300">🗣️ Spoken Languages</h2>
+  <ul className="space-y-4 text-white">
+    <li className="flex justify-between items-center">
+      <span className="font-semibold text-cyan-400">English</span>
+      <span className="text-cyan-300 text-xl">●●●●●</span>
+    </li>
+    <li className="flex justify-between items-center">
+      <span className="font-semibold text-cyan-400">Hindi</span>
+      <span className="text-cyan-300 text-xl">●●●●●</span>
+    </li>
+  </ul>
+</section>
+
 
           {/* Projects */}
-          <section className="px-6 py-12 max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-300">💼 Projects</h2>
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Kodak Smile",
-                  link: "https://apps.apple.com/in/app/kodak-smile/id1447241173",
-                },
-                {
-                  title: "KODAK SMILE Classic 2-in-1",
-                  link: "https://apps.apple.com/in/app/kodak-smile-classic-2-in-1/id1448368147",
-                },
-                {
-                  title: "KODAK STEP Prints",
-                  link: "https://apps.apple.com/in/app/kodak-step-prints/id1494704742",
-                },
-                {
-                  title: "Polaroid Snaptouch Camera",
-                  link: "https://apps.apple.com/in/app/snaptouch-camera/id1255930529",
-                },
-                {
-                  title: "Polaroid Mint Printer",
-                  link: "https://apps.apple.com/in/app/mint-printer/id1437358918",
-                },
-                {
-                  title: "Polaroid Zip Printer",
-                  link: "https://apps.apple.com/in/app/zip-printer/id1252079118",
-                }
-              ].map((project) => (
-                <div key={project.title} className="bg-zinc-800 bg-opacity-90 p-4 rounded-md shadow hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-cyan-400 underline hover:text-cyan-300"
-                  >
-                    View on App Store
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
+<section className="px-6 py-12 max-w-3xl mx-auto">
+  <h2 className="text-2xl font-bold mb-6 text-cyan-300">💼 Projects</h2>
+  <div className="bg-zinc-800 bg-opacity-90 p-6 rounded-md shadow space-y-3">
+    {[
+      { title: "Kodak Smile", link: "https://apps.apple.com/in/app/kodak-smile/id1447241173" },
+      { title: "KODAK SMILE Classic 2-in-1", link: "https://apps.apple.com/in/app/kodak-smile-classic-2-in-1/id1448368147" },
+      { title: "KODAK STEP Prints", link: "https://apps.apple.com/in/app/kodak-step-prints/id1494704742" },
+      { title: "Polaroid Snaptouch Camera", link: "https://apps.apple.com/in/app/snaptouch-camera/id1255930529" },
+      { title: "Polaroid Mint Printer", link: "https://apps.apple.com/in/app/mint-printer/id1437358918" },
+      { title: "Polaroid Zip Printer", link: "https://apps.apple.com/in/app/zip-printer/id1252079118" }
+    ].map((project) => (
+      <p key={project.title}>
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-cyan-400 hover:text-cyan-300 underline"
+        >
+          {project.title}
+        </a>
+      </p>
+    ))}
+  </div>
+</section>
+
 
           {/* Education */}
           <section className="px-6 py-12 max-w-3xl mx-auto bg-zinc-800 rounded-md shadow-md mb-12">
