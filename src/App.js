@@ -90,7 +90,7 @@ export default function App() {
       >
         KODAK SMILE
       </a>{" "}
-      (https://apps.apple.com/in/app/kodak-smile/id1447241173) <br />
+      <br />
       Enhanced photo editing tools, integrated Core Data for offline assets, improved camera logic & Bluetooth permissions, and resolved App Store compliance issues.
     </p>
     <p>
@@ -102,7 +102,7 @@ export default function App() {
       >
         KODAK SMILE Classic 2-in-1
       </a>{" "}
-      (https://apps.apple.com/in/app/kodak-smile-classic-2-in-1/id1448368147) <br />
+      <br />
       Managed offline asset storage via Core Data, improved UI compliance, and ensured smooth App Store deployment through localization and SDK debugging.
     </p>
     <p>
@@ -114,7 +114,7 @@ export default function App() {
       >
         KODAK STEP Prints
       </a>{" "}
-      (https://apps.apple.com/in/app/kodak-step-prints/id1494704742) <br />
+      <br />
       Refined print & collage flow logic, implemented Core Data caching, and improved in-app asset performance and print reliability.
     </p>
     <p>
@@ -126,7 +126,7 @@ export default function App() {
       >
         Zip Printer
       </a>{" "}
-      (https://apps.apple.com/in/app/zip-printer/id1252079118) <br />
+      <br />
       Integrated a categorized UI with Core Data, fixed firmware and permission-related bugs, added panorama support, and enhanced print preview performance.
     </p>
     <p>
@@ -138,7 +138,7 @@ export default function App() {
       >
         Polaroid Snaptouch Camera
       </a>{" "}
-      (https://apps.apple.com/in/app/snaptouch-camera/id1255930529) <br />
+      <br />
       Improved panorama editing UI, resolved camera/photo rendering issues, optimized firmware sync, and streamlined collage-print transitions.
     </p>
     <p>
@@ -150,7 +150,7 @@ export default function App() {
       >
         Polaroid Mint Printer
       </a>{" "}
-      (https://apps.apple.com/in/app/mint-printer/id1437358918) <br />
+      <br />
       Enhanced firmware update logic, reduced print lag, and optimized layout transitions and asset caching in the editing interface.
     </p>
   </div>
@@ -178,7 +178,7 @@ export default function App() {
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
                 <p className="text-cyan-400 font-semibold">2023 Jul</p>
-                <p>Joined CS Soft Solutions as iOS Developer Trainee (Swift, UIKit, BLE)</p>
+                <p>Joined CS Soft Solutions as iOS Developer Trainee (Swift, UIKit, MVC)</p>
               </li>
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
@@ -188,7 +188,7 @@ export default function App() {
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
                 <p className="text-cyan-400 font-semibold">2024 Jul</p>
-                <p>Joined C+A Global as iOS Developer, enhanced skills in MVVM, Core Data</p>
+                <p>Joined C+A Global as iOS Developer, enhanced skills in MVVM, Core Data, BLE</p>
               </li>
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
