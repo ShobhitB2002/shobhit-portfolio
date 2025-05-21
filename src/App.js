@@ -62,41 +62,72 @@ export default function App() {
             </ul>
           </section>
 
+          {/* Spoken Languages */}
+          <section className="px-6 py-12 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4 text-cyan-300">🗣️ Spoken Languages</h2>
+            <ul className="space-y-2 text-white">
+              <li><span className="font-semibold text-cyan-400">English:</span> 5 / 5</li>
+              <li><span className="font-semibold text-cyan-400">Hindi:</span> 5 / 5</li>
+            </ul>
+          </section>
+
           {/* Projects */}
           <section className="px-6 py-12 max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-cyan-300">💼 Projects</h2>
             <div className="space-y-6">
-              <div className="bg-zinc-800 bg-opacity-90 p-4 rounded-md shadow hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold">EmployeeDatabase – iOS App</h3>
-                <p className="text-sm text-zinc-400">
-                  A Core Data-based employee manager app with clean MVC architecture.
-                </p>
-                <a
-                  href="https://github.com/ShobhitB2002/EmployeeDatabase-iOS"
-                  target="_blank"
-                  className="text-cyan-400 underline hover:text-cyan-300"
-                  rel="noopener noreferrer"
-                >
-                  View on GitHub
-                </a>
-                {/* Tech Stack */}
-                <div className="mt-3 text-sm text-zinc-300">
-                  <span className="font-semibold text-cyan-400">Tech Stack:</span> Swift, UIKit, Core Data, MVC
+              {[
+                {
+                  title: "Kodak Smile",
+                  link: "https://apps.apple.com/in/app/kodak-smile/id1447241173",
+                },
+                {
+                  title: "KODAK SMILE Classic 2-in-1",
+                  link: "https://apps.apple.com/in/app/kodak-smile-classic-2-in-1/id1448368147",
+                },
+                {
+                  title: "KODAK STEP Prints",
+                  link: "https://apps.apple.com/in/app/kodak-step-prints/id1494704742",
+                },
+                {
+                  title: "Polaroid Snaptouch Camera",
+                  link: "https://apps.apple.com/in/app/snaptouch-camera/id1255930529",
+                },
+                {
+                  title: "Polaroid Mint Printer",
+                  link: "https://apps.apple.com/in/app/mint-printer/id1437358918",
+                },
+                {
+                  title: "Polaroid Zip Printer",
+                  link: "https://apps.apple.com/in/app/zip-printer/id1252079118",
+                }
+              ].map((project) => (
+                <div key={project.title} className="bg-zinc-800 bg-opacity-90 p-4 rounded-md shadow hover:shadow-lg transition-shadow">
+                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 underline hover:text-cyan-300"
+                  >
+                    View on App Store
+                  </a>
                 </div>
-              </div>
+              ))}
             </div>
           </section>
 
-                {/* Education */}
-      <section className="px-6 py-12 max-w-3xl mx-auto bg-zinc-800 rounded-md shadow-md mb-12">
-        <h2 className="text-2xl font-bold mb-6 text-cyan-300">🎓 Education</h2>
-        <ul className="space-y-4">
-          <li>
-            <p className="font-semibold text-cyan-400">Swami Vivekanand Institute of Engineering & Technology, Punjab, India</p>
-            <p>Bachelor of Computer Applications (BCA), 2020 – 2023</p>
-          </li>
-        </ul>
-      </section>
+          {/* Education */}
+          <section className="px-6 py-12 max-w-3xl mx-auto bg-zinc-800 rounded-md shadow-md mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-cyan-300">🎓 Education</h2>
+            <ul className="space-y-4">
+              <li>
+                <p className="font-semibold text-cyan-400">
+                  Swami Vivekanand Institute of Engineering & Technology, Punjab, India
+                </p>
+                <p>Bachelor of Computer Applications (BCA), 2020 – 2023</p>
+              </li>
+            </ul>
+          </section>
 
           {/* Timeline */}
           <section className="px-6 py-12 bg-zinc-800 bg-opacity-90 max-w-3xl mx-auto rounded-md shadow-md mt-12">
@@ -104,18 +135,23 @@ export default function App() {
             <ol className="relative border-l-2 border-cyan-400 pl-6">
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
-                <p className="text-cyan-400 font-semibold">2023</p>
-                <p>Joined current company as iOS Developer (Swift, UIKit, BLE)</p>
+                <p className="text-cyan-400 font-semibold">2023 Jul</p>
+                <p>Joined CS Soft Solutions as iOS Developer Trainee (Swift, UIKit, BLE)</p>
               </li>
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
-                <p className="text-cyan-400 font-semibold">2024</p>
-                <p>Delivered multiple iOS apps to App Store (Kodak, Polaroid)</p>
+                <p className="text-cyan-400 font-semibold">2023 Dec</p>
+                <p>Completed training at CS Soft Solutions</p>
+              </li>
+              <li className="mb-8">
+                <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
+                <p className="text-cyan-400 font-semibold">2024 Jul</p>
+                <p>Joined C+A Global as iOS Developer, enhanced skills in MVVM, Core Data</p>
               </li>
               <li className="mb-8">
                 <span className="absolute -left-2 mt-1 w-3 h-3 bg-cyan-400 rounded-full"></span>
                 <p className="text-cyan-400 font-semibold">2025</p>
-                <p>Sharpening portfolio & GitHub for product-based opportunities (SwiftUI, Vrix, Local AI tools)</p>
+                <p>Currently at C+A Global, contributed to Kodak, Polaroid & other live apps</p>
               </li>
             </ol>
           </section>
