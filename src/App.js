@@ -63,7 +63,7 @@ export default function App() {
           </section>
 
           {/* Spoken Languages */}
-<section className="px-6 py-12 bg-zinc-800 bg-opacity-90 max-w-3xl mx-auto rounded-md shadow-md">
+<section className="px-6 py-12 mt-12 bg-zinc-800 bg-opacity-90 max-w-3xl mx-auto rounded-md shadow-md">
   <h2 className="text-2xl font-bold mb-6 text-cyan-300">🗣️ Spoken Languages</h2>
   <ul className="space-y-4 text-white">
     <li className="flex justify-between items-center">
