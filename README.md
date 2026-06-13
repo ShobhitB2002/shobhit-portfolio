@@ -1,7 +1,7 @@
 # My Personal Portfolio Website
 
 This is the codebase for my personal developer portfolio website:  
-**[shobhit-portfolio.vercel.app](https://shobhit-portfolio.vercel.app/)**
+**[shobhitbansal2002.vercel.app](https://shobhitbansal2002.vercel.app/)**
 
 ---
 
