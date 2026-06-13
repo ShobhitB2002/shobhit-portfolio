@@ -12,49 +12,44 @@ export default function Skills() {
     },
     {
       category: "ARCHITECTURE & PATTERNS",
-      skills: ["MVC", "MVVM", "Singleton Pattern", "Delegate Pattern"]
+      skills: ["MVC", "MVVM", "Singleton Pattern", "Delegate Pattern", "NotificationCenter"]
     },
     {
       category: "DATA & PERSISTENCE",
-      skills: ["Core Data", "Drift (SQLite)", "Kingfisher", "REST APIs", "JSON"]
+      skills: ["Core Data", "Drift (SQLite)", "REST APIs", "JSON", "UserDefaults"]
     },
     {
       category: "DEVELOPMENT TOOLS",
-      skills: ["Xcode", "Git", "SourceTree", "Asana", "Postman", "CocoaPods"]
+      skills: ["Xcode", "Git", "SourceTree", "Postman", "CocoaPods", "Swift Package Manager", "TestFlight", "Instruments/Profiling"]
     },
     {
       category: "FRAMEWORKS & LIBRARIES",
-      skills: ["UIKit", "Flutter", "Provider", "GCD", "Auto Layout", "fl_chart"]
+      skills: ["UIKit", "Flutter", "Kingfisher", "Provider", "GCD", "Auto Layout", "fl_chart", "async/await"]
     }
   ];
 
   return (
-    <section className="py-20 px-6 bg-[#0A0A0A]">
+    <section id="skills" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <span className="section-tag">Skills</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-[var(--text-1)]">
           Technical Skills
         </h2>
-        <p className="text-xl text-gray-400 text-center mb-16">
+        <p className="text-lg text-[var(--text-2)] text-center mb-16">
           Technologies and tools I work with daily
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map((category, index) => (
-            <div 
-              key={index}
-              className="bg-[#1A1A1A] border border-white/10 rounded-xl p-6 md:p-8 hover:border-[#007AFF]/50 transition-all duration-300"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {skillCategories.map((cat, i) => (
+            <div
+              key={i}
+              className="glass-card p-6 md:p-8 fade-up"
+              data-delay={i * 80}
             >
-              <h3 className="text-sm font-bold text-[#007AFF] uppercase tracking-wider mb-4">
-                {category.category}
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, skillIndex) => (
-                  <span 
-                    key={skillIndex}
-                    className="px-4 py-2 bg-[#0A0A0A] border border-white/10 rounded-lg text-sm text-gray-300 hover:border-[#007AFF]/50 hover:text-white transition-all duration-300"
-                  >
-                    {skill}
-                  </span>
+              <h3 className="section-tag mb-4">{cat.category}</h3>
+              <div className="flex flex-wrap gap-2">
+                {cat.skills.map((skill, j) => (
+                  <span key={j} className="skill-pill">{skill}</span>
                 ))}
               </div>
             </div>

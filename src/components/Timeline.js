@@ -6,72 +6,67 @@ export default function Timeline() {
       year: "2023",
       title: "CS Soft Solutions",
       role: "iOS Trainee",
-      description: "Intensive training in Swift, UIKit, and MVC architecture. Built prototype modules and learned iOS fundamentals.",
-      duration: "Jul 2023 - Dec 2023"
-    },
-    {
-      year: "2024-2025",
-      title: "C+A Global India",
-      role: "iOS Developer",
-      description: "Maintained 11 production apps for HP, Kodak, and Polaroid. Integrated 4 printers from scratch, built BLE bridges, fixed legacy Objective-C code.",
-      duration: "Jan 2024 - Dec 2025",
-      current: true
+      description: "Completed intensive iOS training program. Built prototype UIKit modules and practiced Core Data patterns under mentorship. Applied MVC architecture across internal practice projects.",
+      duration: "Jul 2023 – Dec 2023"
     },
     {
       year: "2024",
-      title: "Personal Projects",
-      role: "Independent Developer",
-      description: "Built Forge fitness tracker from scratch using Flutter. 15-table database, TDEE calculator, body composition tracking. 3000+ lines of code.",
-      duration: "2024 - Present"
+      title: "Freelance iOS Developer",
+      role: "Independent",
+      description: "Delivered a Core Data–powered iOS app for a Canadian client. Sole developer — handled requirements, data architecture, implementation, and delivery.",
+      duration: "2024"
     },
     {
-      year: "2025+",
-      title: "What's Next?",
-      role: "Looking for New Opportunities",
-      description: "Seeking product companies in Bangalore, Noida, Gurgaon, or Hyderabad where I can work on consumer-facing apps and hardware integration.",
-      duration: "Future",
-      future: true
+      year: "2024–Present",
+      title: "C+A Global India",
+      role: "iOS Developer",
+      description: "Maintained 10 production apps for HP, Kodak, and Polaroid. Integrated 4 printer models from scratch, built BLE bridges, worked with US QA teams and Chinese hardware engineers. 120K+ combined App Store ratings, 28 languages.",
+      duration: "Jan 2024 – Present",
+      current: true
     }
   ];
 
   return (
-    <section className="py-20 px-6 bg-[#0A0A0A]">
+    <section id="experience" className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          Experience Timeline
+        <span className="section-tag">Experience</span>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--text-1)]">
+          Work History
         </h2>
-        <p className="text-xl text-gray-400 text-center mb-16">
+        <p className="text-lg text-[var(--text-2)] mb-16">
           My journey in iOS development
         </p>
 
-        <div className="space-y-8">
-          {timeline.map((item, index) => (
-            <div 
-              key={index}
-              className={`relative bg-[#1A1A1A] border rounded-xl p-6 md:p-8 transition-all duration-300 ${
-                item.current ? 'border-[#007AFF]' : 'border-white/10'
-              } ${item.future ? 'border-dashed border-white/20' : ''} hover:border-[#007AFF]/50 hover:shadow-lg hover:shadow-[#007AFF]/20`}
+        <div className="space-y-6">
+          {timeline.map((item, i) => (
+            <div
+              key={i}
+              className="glass-card p-6 md:p-8 fade-up"
+              data-delay={i * 80}
+              style={item.current ? { borderColor: 'rgba(56, 189, 248, 0.35)' } : {}}
             >
-              {/* Year badge */}
-              <div className={`inline-block px-4 py-1 rounded-full text-sm font-bold mb-4 ${
-                item.current ? 'bg-[#007AFF] text-white' : 
-                item.future ? 'bg-white/10 text-gray-400' :
-                'bg-white/5 text-gray-400'
-              }`}>
-                {item.year}
-              </div>
-
-              {/* Current badge */}
-              {item.current && (
-                <span className="ml-3 px-3 py-1 bg-[#007AFF]/20 text-[#007AFF] text-xs font-semibold rounded-full">
-                  CURRENT
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span
+                  className="px-3 py-1 rounded-full text-xs font-bold"
+                  style={
+                    item.current
+                      ? { background: 'var(--accent)', color: '#05070f' }
+                      : { background: 'rgba(56,189,248,0.08)', color: 'var(--text-muted)' }
+                  }
+                >
+                  {item.year}
                 </span>
-              )}
-
-              <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-              <p className="text-[#007AFF] font-semibold mb-3">{item.role}</p>
-              <p className="text-gray-400 mb-4 leading-relaxed">{item.description}</p>
-              <p className="text-sm text-gray-500">{item.duration}</p>
+                {item.current && (
+                  <span className="px-3 py-1 rounded-full text-xs font-semibold"
+                    style={{ background: 'rgba(56,189,248,0.12)', color: 'var(--accent)' }}>
+                    CURRENT
+                  </span>
+                )}
+              </div>
+              <h3 className="text-xl font-bold text-[var(--text-1)] mb-1">{item.title}</h3>
+              <p className="font-semibold mb-3 text-[var(--accent)]">{item.role}</p>
+              <p className="text-[var(--text-2)] mb-4 leading-relaxed">{item.description}</p>
+              <p className="text-sm text-[var(--text-muted)]">{item.duration}</p>
             </div>
           ))}
         </div>
