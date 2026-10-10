@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function Stats() {
   const stats = [
-    { number: "2.5 YRS", label: "Production Experience" },
+    { number: "3 YRS", label: "Production Experience" },
     { number: "10",      label: "Live App Store Apps" },
-    { number: "120K+",   label: "Combined App Ratings" },
-    { number: "28",      label: "Languages Supported" },
+    { number: "115K+",   label: "US App Store Ratings" },
+    { number: "4.5–4.7★", label: "App Store Rating" },
     { number: "4",       label: "Printer Models Integrated" },
-    { number: "3",       label: "Fortune 500 Brands" }
+    { number: "60+",     label: "Releases Shipped" }
   ];
 
   return (

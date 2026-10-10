@@ -20,7 +20,7 @@ export default function Timeline() {
       year: "2024–Present",
       title: "C+A Global India",
       role: "iOS Developer",
-      description: "Maintained 10 production apps for HP, Kodak, and Polaroid. Integrated 4 printer models from scratch, built BLE bridges, worked with US QA teams and Chinese hardware engineers. 120K+ combined App Store ratings, 28 languages.",
+      description: "Maintained 10 production apps for HP, Kodak, and Polaroid. Integrated 4 printer models from scratch, built BLE bridges, worked with US QA teams and Chinese hardware engineers. 115K+ US App Store ratings, 28 languages.",
       duration: "Jan 2024 – Present",
       current: true
     }

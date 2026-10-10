@@ -2,11 +2,11 @@ import './globals.css'
 
 export const metadata = {
   title: 'Shobhit Bansal | iOS Engineer — Hardware-Connected Apps',
-  description: 'iOS engineer with 3 years building hardware-connected apps for HP, Kodak & Polaroid. Swift, Objective-C, BLE, Core Data. 10 live App Store apps, 120K+ ratings.',
+  description: 'iOS engineer with 3 years building hardware-connected apps for HP, Kodak & Polaroid. Swift, Objective-C, BLE, Core Data. 10 live App Store apps, 115K+ US ratings.',
   keywords: 'iOS Developer, Swift, Objective-C, CoreBluetooth, BLE, Hardware, HP, Kodak, Polaroid, Mohali, India, Remote iOS Engineer',
   openGraph: {
     title: 'Shobhit Bansal | iOS Engineer — Hardware-Connected Apps',
-    description: 'iOS engineer building hardware-connected apps for HP, Kodak & Polaroid. 10 live App Store apps, 120K+ ratings.',
+    description: 'iOS engineer building hardware-connected apps for HP, Kodak & Polaroid. 10 live App Store apps, 115K+ US ratings.',
     type: 'website',
     url: 'https://shobhitbansal2002.vercel.app',
   },
