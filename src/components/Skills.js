@@ -4,7 +4,7 @@ export default function Skills() {
   const skillCategories = [
     {
       category: "LANGUAGES",
-      skills: ["Swift", "Objective-C", "Dart (Flutter)"]
+      skills: ["Swift", "Objective-C"]
     },
     {
       category: "HARDWARE INTEGRATION",
@@ -16,7 +16,7 @@ export default function Skills() {
     },
     {
       category: "DATA & PERSISTENCE",
-      skills: ["Core Data", "Drift (SQLite)", "REST APIs", "JSON", "UserDefaults"]
+      skills: ["Core Data", "REST APIs", "JSON", "UserDefaults"]
     },
     {
       category: "DEVELOPMENT TOOLS",
@@ -24,7 +24,7 @@ export default function Skills() {
     },
     {
       category: "FRAMEWORKS & LIBRARIES",
-      skills: ["UIKit", "Flutter", "Kingfisher", "Provider", "GCD", "Auto Layout", "fl_chart", "async/await"]
+      skills: ["UIKit", "Kingfisher", "GCD", "Auto Layout", "async/await"]
     }
   ];
 
