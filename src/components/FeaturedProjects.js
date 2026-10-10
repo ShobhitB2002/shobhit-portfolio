@@ -8,7 +8,7 @@ export default function FeaturedProjects() {
       subtitle: "7 production apps for instant photo printers",
       challenge: "Offline asset caching across multiple apps with shared sticker/frame libraries",
       solution: "Built Core Data sync engine handling hundreds of assets across apps",
-      impact: "120K+ combined App Store ratings, 28 languages, 4.5+ average rating",
+      impact: "115K+ US App Store ratings, 4.5–4.7★ average rating",
       tech: "Swift, Objective-C, CoreBluetooth, Core Data",
       link: "https://apps.apple.com/us/app/kodak-smile/id1447241173",
       screenshots: [
@@ -26,20 +26,6 @@ export default function FeaturedProjects() {
       tech: "Flutter, Swift, CoreBluetooth, Method Channels",
       inDevelopment: true,
       screenshots: []
-    },
-    {
-      title: "Forge Fitness Tracker",
-      subtitle: "Personal Project — Calisthenics & Nutrition Tracker",
-      challenge: "Existing fitness apps didn't fit a calisthenics-focused workflow",
-      solution: "Built from scratch — 15-table SQLite database, TDEE calculator, Navy body fat method",
-      impact: "Offline-first fitness tracker with TDEE calculator and body composition analytics, built solo.",
-      tech: "Flutter, Drift (SQLite), Provider, fl_chart",
-      link: "https://github.com/ShobhitB2002/forge",
-      screenshots: [
-        "/apps/screenshots/forge-1.png",
-        "/apps/screenshots/forge-2.png",
-        "/apps/screenshots/forge-3.png"
-      ]
     }
   ];
 
