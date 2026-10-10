@@ -6,7 +6,6 @@ export default function Stats() {
     { number: "10",      label: "Live App Store Apps" },
     { number: "115K+",   label: "US App Store Ratings" },
     { number: "4.5–4.7★", label: "App Store Rating" },
-    { number: "4",       label: "Printer Models Integrated" },
     { number: "60+",     label: "Releases Shipped" }
   ];
 
