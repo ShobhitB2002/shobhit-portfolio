@@ -48,7 +48,7 @@ export default function Contact() {
         {/* Location info */}
         <div className="glass-card p-6 md:p-8 inline-block text-left fade-up">
           <p className="text-[var(--text-2)] text-sm leading-relaxed">
-            Open to remote/WFH worldwide · Hybrid in Tricity · Relocation considered
+            Open to iOS roles: remote, tri-city, Gurugram, Bengaluru or Hyderabad
           </p>
         </div>
 
