@@ -39,7 +39,7 @@ export default function Hero() {
 
         {/* Description */}
         <p className="text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed text-[var(--text-2)]">
-          I write code that bridges mobile apps and hardware. 2.5 years building production apps for HP, Kodak, and Polaroid. 10 live apps, 120K+ ratings.
+          I build iOS apps that connect to hardware. 3 years building and maintaining 10 live App Store apps for HP, Kodak and Polaroid — 4.5–4.7★, 115,000+ US ratings, 60+ releases.
         </p>
 
         {/* CTAs */}
