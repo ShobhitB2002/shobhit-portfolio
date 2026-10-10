@@ -61,13 +61,6 @@ export default function AllApps() {
       icon: "/apps/icons/zink.png",
       description: "Flutter + Native iOS hybrid BLE integration",
       inDevelopment: true
-    },
-    {
-      name: "Forge",
-      icon: "/apps/icons/forge.png",
-      description: "Personal fitness tracker — TDEE, body composition, offline-first",
-      link: "https://github.com/ShobhitB2002/forge",
-      isGitHub: true
     }
   ];
 
@@ -79,7 +72,7 @@ export default function AllApps() {
           10 Live Apps + 1 In Development
         </h2>
         <p className="text-lg text-[var(--text-2)] text-center mb-16">
-          Production apps for HP, Kodak, and Polaroid — plus one personal project
+          Production apps for HP, Kodak, and Polaroid
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
