@@ -10,16 +10,13 @@ export default function About() {
         </h2>
         <div className="glass-card p-8 space-y-5 fade-up">
           <p className="text-lg leading-relaxed text-[var(--text-2)]">
-            I'm an iOS engineer based in Mohali, India — building the software layer between mobile apps and physical hardware.
+            iOS developer with 3 years' experience building and maintaining 10 live App Store apps for HP, Kodak and Polaroid (4.5–4.7★, 115,000+ US ratings, 60+ releases).
           </p>
           <p className="text-lg leading-relaxed text-[var(--text-2)]">
-            Over 2.5 years at C+A Global, I've shipped features and maintained 10 production apps for HP, Kodak, and Polaroid — 120,000+ App Store ratings, 28 languages, used globally. I work daily in Swift and Objective-C, handle BLE device integration and OTA firmware updates, and collaborate with QA teams in the US and hardware engineers in China.
+            I work in Objective-C and Swift with UIKit and Core Data, and specialise in connected devices: BLE, EAAccessory and OTA firmware updates.
           </p>
           <p className="text-lg leading-relaxed text-[var(--text-2)]">
-            I'm AI-augmented — Cursor, Claude Code, and Copilot are part of my daily workflow. I ship faster, debug smarter, and own the architecture end-to-end.
-          </p>
-          <p className="text-lg leading-relaxed text-[var(--text-2)]">
-            Currently exploring SwiftUI. Open to remote iOS engineering roles.
+            Open to iOS roles: remote, tri-city, Gurugram, Bengaluru or Hyderabad.
           </p>
         </div>
       </div>
