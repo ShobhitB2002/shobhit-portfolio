@@ -1,85 +1,107 @@
-# My Personal Portfolio Website
+# Shobhit Bansal — iOS Developer Portfolio
 
-This is the codebase for my personal developer portfolio website:  
-**[shobhitbansal2002.vercel.app](https://shobhitbansal2002.vercel.app/)**
-
----
-
-## About Me
-
-I’m **Shobhit Bansal**, an iOS Developer with 1 year of real-world experience using **Swift**, **UIKit**, **MVVM**, **BLE**, **CoreData**, and more.  
-While my primary focus is mobile app development, I wanted to create a professional portfolio website to showcase my work and growth.
+**Live:** [shobhitbansal2002.vercel.app](https://shobhitbansal2002.vercel.app/)
 
 ---
 
-##  Tech Stack Used
+## About
 
-- **React** (CRA-based single-page app)
-- **Tailwind CSS** for styling
-- **Deployed using Vercel**
-- **Version control via GitHub**
+I'm **Shobhit Bansal**, an iOS Developer with **3 years** of production experience maintaining **10 live App Store apps** for HP, Kodak, and Polaroid — **4.5–4.7★**, **115,000+ US ratings**, **60+ releases**.
 
----
-
-## How I Built This (as an iOS Dev)
-
-Honestly, I had **no prior experience with web development**, but I challenged myself to build this portfolio from scratch. Here's how I approached it:
-
-1. **Used ChatGPT** to generate starter code in React + Tailwind.
-2. **Used Vercel** for free and easy deployment of the site.
-3. Iteratively added feature tweaks (like animations, icons, background images, etc.) and **learned by doing**.
-4. Finalized the layout, design, and responsiveness based on real-time feedback and experimentation.
+Open to iOS roles: remote, tri-city (Chandigarh/Mohali/Panchkula), Gurugram, Bengaluru, or Hyderabad.
 
 ---
 
-## Features
+## Tech Stack (Portfolio Site)
 
-- Clean & simple Hero section with profile and intro.
-- Timeline of my iOS dev journey.
-- Skills section with tools I’ve used.
-- Projects section (GitHub-linked).
-- Fully responsive layout.
-- Contact section with email, LinkedIn, GitHub.
-- Background image for style (with dark overlay).
-- **Text and image protection enabled**.
+| Layer | Technology |
+|---|---|
+| Framework | **Next.js 16.2.9** (App Router, SSG) |
+| Styling | **Tailwind CSS 3.3.2** + custom CSS (globals.css) |
+| Fonts | Space Grotesk · Inter · JetBrains Mono (Google Fonts) |
+| Deployment | **Vercel** |
+| Rendering | Static HTML generated at build time — fully crawlable |
 
----
-
-## 📂 Folder Structure (Important Files)
-📁 public/
-└── profile.jpg
-└── resume.pdf
-└── background.jpg
-
-📁 src/
-└── App.js // Main layout and content
-└── index.css // Tailwind + custom styles
+*Migrated from Create React App → Next.js App Router (June 2025) for proper SSG and SEO crawlability.*
 
 ---
 
-## Credits
+## My iOS Skills
 
-Big thanks to:
-- **ChatGPT** for helping me understand and build every part of this.
-- All the open-source tools like React, Tailwind CSS, and Vercel.
-- My own curiosity & persistence.
-
----
-
-## What I Learned
-
-- Web basics (JSX, CSS, Tailwind, React components)
-- Deploying a React app on Vercel
-- How frontend dev differs from iOS dev
+**Languages:** Swift, Objective-C  
+**Hardware:** CoreBluetooth, EAAccessory, Firmware OTA Updates, BLE Protocols  
+**Architecture:** MVC, MVVM, Singleton, Delegate, NotificationCenter  
+**Data:** Core Data, REST APIs, JSON, UserDefaults  
+**Tools:** Xcode, Git, SourceTree, Postman, CocoaPods, SPM, TestFlight, Instruments  
+**Frameworks:** UIKit, Kingfisher, GCD, Auto Layout, async/await
 
 ---
 
-This is a work-in-progress portfolio built from scratch — inspired by clean design, focused content, and a logic-first mindset.
+## Component Architecture
+
+```
+src/
+├── app/
+│   ├── layout.js          # Metadata, JSON-LD schema, Google Fonts (Server)
+│   ├── page.js            # Root page — assembles all sections (Server)
+│   └── globals.css        # CSS custom properties, glass-card, animations
+└── components/
+    ├── AnimationProvider.js   # 'use client' — IntersectionObserver fade-ups
+    ├── Navbar.js              # 'use client' — scroll-aware sticky nav
+    ├── FeaturedProjects.js    # 'use client' — image carousel (useState)
+    ├── Hero.js                # Server component
+    ├── About.js               # Server component
+    ├── Stats.js               # Server component
+    ├── AllApps.js             # Server component — 10 App Store apps + 1 in dev
+    ├── Skills.js              # Server component
+    ├── Timeline.js            # Server component
+    ├── Education.js           # Server component
+    └── Contact.js             # Server component
+```
+
+**Client boundary:** Only `AnimationProvider`, `Navbar`, and `FeaturedProjects` use `'use client'`. Everything else is a React Server Component.
 
 ---
 
-## Contact Me
+## Stats (as of Oct 2025)
 
-- **Email**: [shobhitbansal.chd@gmail.com](mailto:shobhitbansal.chd@gmail.com)  
-- **LinkedIn**: [shobhitbansal2002](https://www.linkedin.com/in/shobhitbansal2002)  
-- **GitHub**: [ShobhitB2002](https://github.com/ShobhitB2002)
+| Stat | Value |
+|---|---|
+| Production experience | 3 years |
+| Live App Store apps | 10 |
+| US App Store ratings | 115K+ |
+| App Store rating | 4.5–4.7★ |
+| Releases shipped | 60+ |
+
+---
+
+## Featured Apps
+
+**Kodak & Polaroid Ecosystem (7 apps):** Kodak Smile, Kodak Smile Classic, Kodak STEP Prints, Polaroid Mint, Polaroid Zip, Polaroid Snaptouch, Polaroid Pop
+
+**HP (2 apps):** HP Sprocket, HP Sprocket Panorama
+
+**In Development:** Zink Photo (Flutter + Native iOS BLE bridge via Method Channels)
+
+---
+
+## Running Locally
+
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # Static build
+npm run start    # Serve build locally
+```
+
+---
+
+## Contact
+
+- **Email:** [shobhitbansal.chd@gmail.com](mailto:shobhitbansal.chd@gmail.com)
+- **LinkedIn:** [shobhitbansal2002](https://www.linkedin.com/in/shobhitbansal2002)
+- **GitHub:** [ShobhitB2002](https://github.com/ShobhitB2002)
+
+---
+
+*Last updated: October 2025*
