@@ -4,6 +4,11 @@ export const metadata = {
   title: 'Shobhit Bansal | iOS Engineer — Hardware-Connected Apps',
   description: 'iOS engineer with 3 years building hardware-connected apps for HP, Kodak & Polaroid. Swift, Objective-C, BLE, Core Data. 10 live App Store apps, 115K+ US ratings.',
   keywords: 'iOS Developer, Swift, Objective-C, CoreBluetooth, BLE, Hardware, HP, Kodak, Polaroid, Mohali, India, Remote iOS Engineer',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/logo192.png',
+  },
+  manifest: '/manifest.json',
   openGraph: {
     title: 'Shobhit Bansal | iOS Engineer — Hardware-Connected Apps',
     description: 'iOS engineer building hardware-connected apps for HP, Kodak & Polaroid. 10 live App Store apps, 115K+ US ratings.',
@@ -36,10 +41,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="theme-color" content="#05070f" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <script

@@ -1,62 +1,85 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import ComicSFX from './ComicSFX';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-6">
+    <section id="contact" className="py-20 px-4 sm:px-6 relative z-10">
       <div className="max-w-4xl mx-auto text-center">
-        <span className="section-tag">Contact</span>
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[var(--text-1)]">
-          Let's Build Something Together
-        </h2>
-        <p className="text-lg text-[var(--text-2)] mb-4 max-w-2xl mx-auto">
-          Ready to build something that connects mobile and hardware?
-        </p>
-        <p className="text-[var(--accent)] font-medium mb-12 text-lg" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-          shobhitbansal.chd@gmail.com
-        </p>
+        {/* Section Header with SFX */}
+        <div className="flex items-center justify-center gap-3 mb-3">
+          <span className="section-tag">Contact</span>
+          <ComicSFX text="DISPATCH!" rotate={-4} size="sm" />
+        </div>
 
-        {/* Contact buttons */}
-        <div className="flex flex-wrap gap-5 justify-center mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-[var(--text-1)]">
+          Let&apos;s Build Something Together
+        </h2>
+
+        {/* Comic Speech Bubble */}
+        <div className="comic-speech-bubble comic-speech-tail-bottom max-w-lg mx-auto p-5 mb-8">
+          <p className="text-base sm:text-lg font-bold text-[#f1f5f9] leading-snug">
+            Ready to build something that connects mobile and hardware?
+          </p>
+        </div>
+
+        {/* Email Pill */}
+        <div className="mb-10 inline-block">
           <a
             href="mailto:shobhitbansal.chd@gmail.com"
-            className="primary-btn flex items-center gap-3 px-8 py-4 font-semibold"
+            className="inline-flex items-center gap-2 bg-[#0c1220] border-2 border-black px-5 py-2.5 rounded-lg shadow-[3px_3px_0px_#000] text-[var(--accent)] font-mono font-bold text-base sm:text-lg hover:text-[#7dd3fc] transition-colors"
           >
-            <FaEnvelope />
+            <span>shobhitbansal.chd@gmail.com</span>
+          </a>
+        </div>
+
+        {/* Comic Action Buttons */}
+        <div className="flex flex-wrap gap-4 justify-center mb-12">
+          <a
+            href="mailto:shobhitbansal.chd@gmail.com"
+            className="comic-btn-primary px-7 py-3.5 text-base"
+          >
+            <FaEnvelope className="text-lg" />
             <span>Email Me</span>
           </a>
           <a
             href="https://linkedin.com/in/shobhitbansal2002"
             target="_blank"
             rel="noopener noreferrer"
-            className="ghost-btn flex items-center gap-3 px-8 py-4 font-semibold"
+            className="comic-btn-ghost px-7 py-3.5 text-base"
           >
-            <FaLinkedin />
+            <FaLinkedin className="text-lg text-[var(--accent)]" />
             <span>LinkedIn</span>
           </a>
           <a
             href="https://github.com/ShobhitB2002"
             target="_blank"
             rel="noopener noreferrer"
-            className="ghost-btn flex items-center gap-3 px-8 py-4 font-semibold"
+            className="comic-btn-ghost px-7 py-3.5 text-base"
           >
-            <FaGithub />
+            <FaGithub className="text-lg text-[var(--accent)]" />
             <span>GitHub</span>
           </a>
         </div>
 
-        {/* Location info */}
-        <div className="glass-card p-6 md:p-8 inline-block text-left fade-up">
-          <p className="text-[var(--text-2)] text-sm leading-relaxed">
-            Open to iOS roles: remote, tri-city, Gurugram, Bengaluru or Hyderabad
-          </p>
+        {/* Location Info Comic Card */}
+        <div className="comic-panel p-5 sm:p-6 inline-block text-left fade-up max-w-md mx-auto">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl select-none" aria-hidden="true">📍</span>
+            <p className="text-[var(--text-1)] text-xs sm:text-sm font-medium leading-relaxed">
+              Open to iOS roles: remote, tri-city, Gurugram, Bengaluru or Hyderabad
+            </p>
+          </div>
         </div>
 
         {/* Footer */}
-        <div className="mt-16 pt-8" style={{ borderTop: '1px solid rgba(56,189,248,0.1)' }}>
-          <p className="text-sm text-[var(--text-muted)]">
-            © 2026 Shobhit Bansal. Built with React &amp; Tailwind CSS.
-          </p>
+        <div className="mt-16 pt-8 border-t-2 border-black/40">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-[var(--text-muted)]">
+            <p>© 2026 Shobhit Bansal. Built with React &amp; Tailwind CSS.</p>
+            <p className="bg-[#0c1220] border border-black px-2.5 py-1 rounded text-[var(--accent)]">
+              COMIC EDITION // v2.0
+            </p>
+          </div>
         </div>
       </div>
     </section>

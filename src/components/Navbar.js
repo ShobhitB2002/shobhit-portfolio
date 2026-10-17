@@ -5,24 +5,36 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
-    <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
-      <a href="#home" className="navbar-logo">SB</a>
-      <div className="navbar-links">
-        <a href="#about">About</a>
-        <a href="#apps">Apps</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+    <header className={`navbar${scrolled ? ' scrolled' : ''}`}>
+      <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
+        <a href="#home" className="navbar-logo" aria-label="Shobhit Bansal Home">
+          <span>SB</span>
+        </a>
+
+        <nav className="navbar-links" aria-label="Main Navigation">
+          <a href="#about">About</a>
+          <a href="#stats">Stats</a>
+          <a href="#apps">Apps</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a 
+          href="/resume.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="comic-btn-primary px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-bold"
+        >
+          Download Resume
+        </a>
       </div>
-      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="navbar-resume-btn">
-        Download Resume
-      </a>
-    </nav>
+    </header>
   );
 }

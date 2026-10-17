@@ -1,4 +1,5 @@
 import React from 'react';
+import ComicSFX from './ComicSFX';
 
 export default function AllApps() {
   const apps = [
@@ -65,47 +66,54 @@ export default function AllApps() {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-4 sm:px-6 relative z-10">
       <div className="max-w-6xl mx-auto">
-        <span className="section-tag">All Apps</span>
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-[var(--text-1)]">
-          10 Live Apps + 1 In Development
-        </h2>
-        <p className="text-lg text-[var(--text-2)] text-center mb-16">
-          Production apps for HP, Kodak, and Polaroid
-        </p>
+        <div className="text-center mb-14">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <span className="section-tag">All Apps</span>
+            <ComicSFX text="10x LIVE!" rotate={3} size="sm" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-[var(--text-1)]">
+            10 Live Apps + 1 In Development
+          </h2>
+          <p className="text-base sm:text-lg text-[var(--text-2)] max-w-xl mx-auto font-medium">
+            Production apps for HP, Kodak, and Polaroid
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {apps.map((app, i) => {
-            const cardContent = (
-              <div className="flex items-start gap-4">
-                <img
-                  src={app.icon}
-                  alt={`${app.name} icon`}
-                  className="w-16 h-16 rounded-xl flex-shrink-0"
-                />
+            const cardInner = (
+              <div className="flex items-start gap-4 relative z-10">
+                <div className="relative flex-shrink-0">
+                  <img
+                    src={app.icon}
+                    alt={`${app.name} icon`}
+                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl border-2 border-black shadow-[2px_2px_0px_#000] object-cover"
+                  />
+                  <span className="absolute -bottom-1 -right-1 text-[9px] font-mono font-bold bg-[#05070f] text-[var(--accent)] px-1 rounded border border-black">
+                    #{String(i + 1).padStart(2, '0')}
+                  </span>
+                </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <h3 className="text-base font-bold text-[var(--text-1)]">{app.name}</h3>
+                    <h3 className="text-base font-bold text-[var(--text-1)] truncate">
+                      {app.name}
+                    </h3>
                     {app.inDevelopment && (
-                      <span className="text-xs px-2 py-0.5 rounded"
-                        style={{ background: 'rgba(129,140,248,0.15)', color: 'var(--accent-2)' }}>
-                        In Development
-                      </span>
-                    )}
-                    {app.isGitHub && (
-                      <span className="text-xs px-2 py-0.5 rounded"
-                        style={{ background: 'rgba(56,189,248,0.12)', color: 'var(--accent)' }}>
-                        Personal
+                      <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-[rgba(129,140,248,0.2)] text-[var(--accent-2)] border border-[var(--accent-2)]">
+                        DEV
                       </span>
                     )}
                   </div>
-                  <p className="text-sm text-[var(--text-2)] mb-3 leading-relaxed">{app.description}</p>
+                  <p className="text-xs sm:text-sm text-[var(--text-2)] mb-3 leading-relaxed">
+                    {app.description}
+                  </p>
                   {!app.inDevelopment && (
-                    <div className="flex items-center gap-1.5 text-sm font-semibold text-[var(--accent)]">
-                      {app.isGitHub ? 'View on GitHub' : 'View on App Store'}
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[var(--accent)] group-hover:text-[var(--text-1)] transition-colors">
+                      <span>View on App Store</span>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </div>
                   )}
@@ -115,8 +123,13 @@ export default function AllApps() {
 
             if (app.inDevelopment) {
               return (
-                <div key={i} className="glass-card p-5 fade-up" data-delay={i * 60}>
-                  {cardContent}
+                <div 
+                  key={i} 
+                  className="comic-panel p-5 fade-up relative overflow-hidden group" 
+                  data-delay={i * 50}
+                >
+                  <div className="absolute inset-0 comic-halftone-card opacity-20 pointer-events-none" aria-hidden="true" />
+                  {cardInner}
                 </div>
               );
             }
@@ -127,11 +140,11 @@ export default function AllApps() {
                 href={app.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-card p-5 block fade-up"
-                data-delay={i * 60}
-                style={{ textDecoration: 'none' }}
+                className="comic-panel p-5 block fade-up relative overflow-hidden group !no-underline"
+                data-delay={i * 50}
               >
-                {cardContent}
+                <div className="absolute inset-0 comic-halftone-card opacity-15 group-hover:opacity-35 transition-opacity pointer-events-none" aria-hidden="true" />
+                {cardInner}
               </a>
             );
           })}
