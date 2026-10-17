@@ -17,6 +17,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start:pc": "next start -H 127.0.0.1 -p 8090",
     "lint": "next lint"
   }
 }
