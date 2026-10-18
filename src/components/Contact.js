@@ -2,14 +2,21 @@ import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import ComicSFX from './ComicSFX';
 
-export default function Contact() {
+export default function Contact({ activeQuest = 'main' }) {
+  const isSide = activeQuest === 'side';
+
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 relative z-10">
       <div className="max-w-4xl mx-auto text-center">
         {/* Section Header with SFX */}
         <div className="flex items-center justify-center gap-3 mb-3">
-          <span className="section-tag">Contact</span>
-          <ComicSFX text="DISPATCH!" rotate={-4} size="sm" />
+          <span className={isSide ? "section-tag-warm" : "section-tag"}>Contact</span>
+          <ComicSFX 
+            text="DISPATCH!" 
+            color={isSide ? "warm" : "cyan"} 
+            rotate={-4} 
+            size="sm" 
+          />
         </div>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-[var(--text-1)]">
@@ -17,9 +24,12 @@ export default function Contact() {
         </h2>
 
         {/* Comic Speech Bubble */}
-        <div className="comic-speech-bubble comic-speech-tail-bottom max-w-lg mx-auto p-5 mb-8">
-          <p className="text-base sm:text-lg font-bold text-[#f1f5f9] leading-snug">
+        <div className={`comic-speech-bubble comic-speech-tail-bottom max-w-lg mx-auto p-5 mb-8 ${isSide ? 'comic-speech-bubble-warm' : ''}`}>
+          <p className="text-base sm:text-lg font-bold text-[#f1f5f9] leading-snug mb-2">
             Ready to build something that connects mobile and hardware?
+          </p>
+          <p className="text-sm font-bold text-[var(--accent-side-neon)] font-mono">
+            &ldquo;Let&apos;s automate something.&rdquo;
           </p>
         </div>
 
@@ -77,7 +87,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-[var(--text-muted)]">
             <p>© 2026 Shobhit Bansal. Built with React &amp; Tailwind CSS.</p>
             <p className="bg-[#0c1220] border border-black px-2.5 py-1 rounded text-[var(--accent)]">
-              COMIC EDITION // v2.0
+              DUAL QUEST EDITION // v2.5
             </p>
           </div>
         </div>

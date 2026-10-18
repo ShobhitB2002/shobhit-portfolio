@@ -5,7 +5,14 @@ import React, { useRef, useEffect, useState } from 'react';
  * ComicPortraitTilt - Single lightweight cursor-reactive 3D tilt
  * Renders the comic portrait with subtle 3D perspective tilt, comic panel framing, and reduced-motion fallback.
  */
-export default function ComicPortraitTilt() {
+export default function ComicPortraitTilt({
+  src = '/portrait.jpg',
+  alt = 'Shobhit Bansal Comic Portrait',
+  theme = 'cyan', // 'cyan' | 'warm'
+  tag = 'SPEC // iOS-ENG',
+  caption = 'SHOBHIT BANSAL',
+  className = ''
+}) {
   const containerRef = useRef(null);
   const cardRef = useRef(null);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -87,25 +94,30 @@ export default function ComicPortraitTilt() {
     };
   }, []);
 
+  const isWarm = theme === 'warm';
+  const rimColor = isWarm ? '#f59e0b' : '#38bdf8';
+  const glowShadow = isWarm ? 'rgba(245, 158, 11, 0.4)' : 'rgba(56, 189, 248, 0.4)';
+  const halftoneClass = isWarm ? 'comic-halftone-dense-warm' : 'comic-halftone-dense';
+
   return (
     <div 
       ref={containerRef}
-      className="relative inline-block cursor-pointer select-none group"
+      className={`relative inline-block cursor-pointer select-none group ${className}`}
       style={{ perspective: '1000px' }}
     >
       {/* Comic Halftone Burst Behind Card */}
       <div 
-        className="absolute -inset-3 rounded-2xl comic-halftone-dense opacity-40 group-hover:opacity-75 transition-opacity duration-300"
+        className={`absolute -inset-3 rounded-2xl ${halftoneClass} opacity-40 group-hover:opacity-80 transition-opacity duration-300`}
         aria-hidden="true"
       />
 
       {/* Card with 3D Tilt */}
       <div
         ref={cardRef}
-        className="relative z-10 w-44 h-56 sm:w-52 sm:h-64 md:w-56 md:h-72 rounded-xl overflow-hidden bg-[#0c1220]"
+        className="relative z-10 w-40 h-52 sm:w-48 sm:h-60 md:w-52 md:h-64 rounded-xl overflow-hidden bg-[#0c1220]"
         style={{
           border: '3px solid #000000',
-          boxShadow: '8px 8px 0px #000000, 0 0 0 2px #38bdf8',
+          boxShadow: `7px 7px 0px #000000, 0 0 0 2px ${rimColor}`,
           transition: isReducedMotion ? 'none' : 'box-shadow 0.2s ease, border-color 0.2s ease',
           transformStyle: 'preserve-3d',
           willChange: 'transform'
@@ -113,25 +125,31 @@ export default function ComicPortraitTilt() {
       >
         {/* Comic Panel Header Tape */}
         <div className="absolute top-0 inset-x-0 z-20 bg-[#05070f] border-b-2 border-black px-2.5 py-1 flex items-center justify-between">
-          <span className="text-[10px] font-mono font-bold tracking-widest text-[var(--accent)] uppercase">
-            SPEC // iOS-ENG
+          <span 
+            className="text-[10px] font-mono font-bold tracking-widest uppercase truncate max-w-[85%]"
+            style={{ color: rimColor }}
+          >
+            {tag}
           </span>
-          <span className="w-2 h-2 rounded-full bg-[var(--accent)] shadow-[0_0_6px_#38bdf8]" />
+          <span 
+            className="w-2 h-2 rounded-full flex-shrink-0"
+            style={{ backgroundColor: rimColor, boxShadow: `0 0 6px ${rimColor}` }}
+          />
         </div>
 
         {/* Comic Portrait Image */}
         <img
-          src="/portrait.jpg"
-          alt="Shobhit Bansal Comic Portrait"
+          src={src}
+          alt={alt}
           className="w-full h-full object-cover object-top pt-5"
           loading="eager"
           decoding="async"
         />
 
         {/* Comic Bottom Caption Tape */}
-        <div className="absolute bottom-0 inset-x-0 z-20 bg-[#05070f]/90 backdrop-blur-sm border-t-2 border-black px-2.5 py-1 text-center">
-          <span className="text-[11px] font-mono font-extrabold tracking-wider text-[#f1f5f9]">
-            SHOBHIT BANSAL
+        <div className="absolute bottom-0 inset-x-0 z-20 bg-[#05070f]/90 backdrop-blur-sm border-t-2 border-black px-2 py-1 text-center">
+          <span className="text-[11px] font-mono font-extrabold tracking-wider text-[#f1f5f9] truncate block">
+            {caption}
           </span>
         </div>
       </div>

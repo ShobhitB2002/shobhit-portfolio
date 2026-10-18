@@ -19,9 +19,23 @@ export default function AnimationProvider({ children }) {
       { threshold: 0.1 }
     )
 
-    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el))
+    const scanAndObserve = () => {
+      document.querySelectorAll('.fade-up:not(.visible)').forEach((el) => observer.observe(el))
+    }
 
-    return () => observer.disconnect()
+    scanAndObserve()
+
+    // MutationObserver to watch for tab/quest switches
+    const mutationObserver = new MutationObserver(() => {
+      scanAndObserve()
+    })
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true })
+
+    return () => {
+      observer.disconnect()
+      mutationObserver.disconnect()
+    }
   }, [])
 
   return children

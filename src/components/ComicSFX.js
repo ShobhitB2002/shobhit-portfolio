@@ -7,16 +7,23 @@ import React from 'react';
  */
 export default function ComicSFX({ 
   text, 
-  variant = 'badge', // 'badge' | 'star' | 'slanted'
+  variant = 'badge', // 'badge' | 'star'
+  color = 'cyan',    // 'cyan' | 'warm' | 'magenta'
   className = '',
   rotate = -3,
-  size = 'md' // 'sm' | 'md' | 'lg'
+  size = 'md'        // 'sm' | 'md' | 'lg'
 }) {
   const sizeClasses = {
     sm: 'text-xs px-2.5 py-1',
     md: 'text-sm md:text-base px-3.5 py-1.5',
     lg: 'text-lg md:text-xl px-4 py-2 font-black'
   };
+
+  const colorClass = color === 'warm' 
+    ? 'comic-sfx-warm' 
+    : color === 'magenta' 
+      ? 'comic-sfx-magenta' 
+      : 'comic-sfx';
 
   if (variant === 'star') {
     return (
@@ -34,7 +41,7 @@ export default function ComicSFX({
 
   return (
     <span
-      className={`comic-sfx inline-flex items-center justify-center font-black select-none uppercase tracking-wider ${sizeClasses[size] || sizeClasses.md} ${className}`}
+      className={`${colorClass} inline-flex items-center justify-center font-black select-none uppercase tracking-wider ${sizeClasses[size] || sizeClasses.md} ${className}`}
       style={{
         transform: `rotate(${rotate}deg)`,
       }}
