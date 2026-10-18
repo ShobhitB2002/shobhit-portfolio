@@ -66,10 +66,10 @@ export default function Navbar({ activeQuest = 'main', setActiveQuest }) {
 
         {/* Action Button */}
         <a 
-          href="/resume.pdf" 
+          href={isMain ? "/resume.pdf" : "/side-quests-resume.pdf"}
           target="_blank" 
           rel="noopener noreferrer" 
-          className="comic-btn-primary px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-bold"
+          className={`${isMain ? 'comic-btn-primary' : 'comic-btn-warm'} px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-bold`}
         >
           Resume
         </a>

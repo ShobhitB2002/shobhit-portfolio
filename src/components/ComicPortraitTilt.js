@@ -114,10 +114,10 @@ export default function ComicPortraitTilt({
       {/* Card with 3D Tilt */}
       <div
         ref={cardRef}
-        className="relative z-10 w-40 h-52 sm:w-48 sm:h-60 md:w-52 md:h-64 rounded-xl overflow-hidden bg-[#0c1220]"
+        className="relative z-10 w-44 h-56 sm:w-52 sm:h-64 md:w-56 md:h-72 rounded-xl overflow-hidden bg-[#0c1220]"
         style={{
           border: '3px solid #000000',
-          boxShadow: `7px 7px 0px #000000, 0 0 0 2px ${rimColor}`,
+          boxShadow: `8px 8px 0px #000000, 0 0 0 2px ${rimColor}`,
           transition: isReducedMotion ? 'none' : 'box-shadow 0.2s ease, border-color 0.2s ease',
           transformStyle: 'preserve-3d',
           willChange: 'transform'
