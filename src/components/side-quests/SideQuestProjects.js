@@ -115,7 +115,7 @@ export default function SideQuestProjects() {
             </div>
           ) : project.isMonogramCard ? (
             <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center comic-halftone-warm">
-              <div className="w-16 h-16 rounded-xl bg-[var(--accent)] border-2 border-black flex items-center justify-center text-2xl font-black text-[#05070f] shadow-[4px_4px_0px_#000] -rotate-3 mb-2">
+              <div className="w-16 h-16 rounded-xl bg-[var(--accent-side)] border-2 border-black flex items-center justify-center text-2xl font-black text-[#05070f] shadow-[4px_4px_0px_#000] -rotate-3 mb-2">
                 SB
               </div>
               <span className="text-xs font-mono font-bold text-[#f1f5f9]">

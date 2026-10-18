@@ -569,7 +569,7 @@ button { user-select: none; }
   text-decoration: none;
   letter-spacing: 0.05em;
   transform: rotate(-2deg);
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, background 0.2s ease;
 }
 
 .navbar-logo:hover {

@@ -16,7 +16,12 @@ export default function Navbar({ activeQuest = 'main', setActiveQuest }) {
     <header className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="max-w-6xl mx-auto w-full flex items-center justify-between gap-3">
         {/* Monogram Logo */}
-        <a href="#home" className="navbar-logo" aria-label="Shobhit Bansal Home">
+        <a 
+          href="#home" 
+          className="navbar-logo" 
+          style={{ background: isMain ? 'var(--accent)' : 'var(--accent-side)' }}
+          aria-label="Shobhit Bansal Home"
+        >
           <span>SB</span>
         </a>
 
