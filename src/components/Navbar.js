@@ -58,7 +58,7 @@ export default function Navbar({ activeQuest = 'main', setActiveQuest }) {
               <a href="#side-projects">Projects</a>
               <a href="#side-timeline">Timeline</a>
               <a href="#side-tools">Tools</a>
-              <a href="#side-interests">Interests</a>
+              {/* <a href="#side-interests">Interests</a> */}
               <a href="#contact">Contact</a>
             </>
           )}

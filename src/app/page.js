@@ -21,7 +21,7 @@ import SideQuestStats from '../components/side-quests/SideQuestStats';
 import SideQuestProjects from '../components/side-quests/SideQuestProjects';
 import SideQuestTimeline from '../components/side-quests/SideQuestTimeline';
 import SideQuestTools from '../components/side-quests/SideQuestTools';
-import SideQuestInterests from '../components/side-quests/SideQuestInterests';
+// import SideQuestInterests from '../components/side-quests/SideQuestInterests';
 
 // Shared Components
 import Contact from '../components/Contact';
@@ -79,8 +79,8 @@ export default function Page() {
                 <SideQuestTools />
                 <ComicGutter label="PANEL BREAK // CHRONICLE LOG" />
                 <SideQuestTimeline />
-                <ComicGutter label="PANEL BREAK // CREDO & FUEL" />
-                <SideQuestInterests />
+                {/* <ComicGutter label="PANEL BREAK // CREDO & FUEL" /> */}
+                {/* <SideQuestInterests /> */}
               </div>
             )}
           </div>
