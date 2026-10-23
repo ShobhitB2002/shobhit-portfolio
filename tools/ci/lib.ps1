@@ -77,9 +77,11 @@ function Test-StagedBuild { param([string]$Sha)
   & git -C $script:CiRoot archive --format=tar --output=$tar $Sha; if ($LASTEXITCODE) { throw 'git archive failed' }
   & "$env:SystemRoot\System32\tar.exe" -x -f $tar -C $stage; if ($LASTEXITCODE) { throw 'tar extract failed' }
   Remove-Item $tar -Force
+  # Turbopack rejects a junction that points outside the project, so node_modules is copied into the scratch export.
   $nm = ($script:Cfg.nodeModulesSource -replace '/', '\')
-  & cmd /c "mklink /J `"$stage\node_modules`" `"$nm`"" | Out-Null
-  if (-not (Test-Path "$stage\node_modules\next")) { throw 'node_modules junction missing next' }
+  & robocopy $nm "$stage\node_modules" /E /MT:8 /NFL /NDL /NJH /NJS /NP | Out-Null
+  if ($LASTEXITCODE -ge 8) { throw "robocopy node_modules failed ($LASTEXITCODE)" }
+  if (-not (Test-Path "$stage\node_modules\next\package.json")) { throw 'copied node_modules missing next' }
   $ErrorActionPreference = 'Continue'
   Push-Location $stage
   try {
@@ -87,6 +89,7 @@ function Test-StagedBuild { param([string]$Sha)
     if ($LASTEXITCODE) { throw "next build failed (exit $LASTEXITCODE)`n$out" }
   } finally { Pop-Location; $ErrorActionPreference = 'Stop' }
   if (-not (Test-Path "$stage\.next\BUILD_ID")) { throw 'no .next/BUILD_ID after build' }
+  Remove-Item -Recurse -Force "$stage\node_modules"  # scratch copy only; the live node_modules is untouched
   Set-Content "$stage\SHA.txt" $Sha
   "built $Sha in $stage"
 }
