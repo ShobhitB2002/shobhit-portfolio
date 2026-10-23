@@ -77,7 +77,9 @@ function Test-StagedBuild { param([string]$Sha)
   & git -C $script:CiRoot archive --format=tar --output=$tar $Sha; if ($LASTEXITCODE) { throw 'git archive failed' }
   & "$env:SystemRoot\System32\tar.exe" -x -f $tar -C $stage; if ($LASTEXITCODE) { throw 'tar extract failed' }
   Remove-Item $tar -Force
-  & cmd /c mklink /J "$stage\node_modules" $script:Cfg.nodeModulesSource | Out-Null
+  $nm = ($script:Cfg.nodeModulesSource -replace '/', '\')
+  & cmd /c "mklink /J `"$stage\node_modules`" `"$nm`"" | Out-Null
+  if (-not (Test-Path "$stage\node_modules\next")) { throw 'node_modules junction missing next' }
   $ErrorActionPreference = 'Continue'
   Push-Location $stage
   try {
