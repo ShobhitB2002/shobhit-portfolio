@@ -9,7 +9,7 @@ Master folder: `D:\Portfolio`. Next.js 16 (App Router), Tailwind 3. Public repo:
 - `D:\ForgeLoop\GENERAL_MODEL_2026-10-21.md` - general local CI/CD model for all projects.
 
 ## Branches
-- `main` - production branch. Vercel's production deploys follow it. Not renamed to `production` (see HISTORY 2026-10-23).
+- `production` - release branch. Renamed from `main` on 2026-10-23 (owner approved). Vercel production deploys follow it once the owner sets Vercel's production branch to `production`.
 - `integration` - combined task work; runs gate-full on push.
 - `task/<type>-<name>` - one task; runs gate-fast on push (pre-push hook).
 - `experiment` - checked out in `D:\Portfolio`. It is the build served on 127.0.0.1:8090. Keep it as-is.
