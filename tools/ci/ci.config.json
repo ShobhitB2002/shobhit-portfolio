@@ -1,19 +1,10 @@
 {
   "project": "portfolio",
-  "branches": {
-    "production": "main",
-    "integration": "integration",
-    "taskPattern": "task/*"
-  },
-  "runsDir": "D:_ci-runsPortfolio",
-  "nodeModulesSource": "D:Portfolio\node_modules",
-  "requiredDocs": [
-    "CLAUDE.md",
-    "docs/RULES.md",
-    "docs/HISTORY.md",
-    "docs/DEPLOYMENT.md"
-  ],
-  "forbiddenTracked": "(^|/)(secrets|.vercel|.env[^/]*)(/|$)|.(key|pem)$",
+  "branches": { "production": "main", "integration": "integration", "taskPattern": "task/*" },
+  "runsDir": "D:/_ci-runs/Portfolio",
+  "nodeModulesSource": "D:/Portfolio/node_modules",
+  "requiredDocs": ["CLAUDE.md", "docs/RULES.md", "docs/HISTORY.md", "docs/DEPLOYMENT.md"],
+  "forbiddenTracked": "(^|/)(secrets|[.]vercel|[.]env[^/]*)(/|$)|[.](key|pem)$",
   "liveRoot": "",
-  "liveNote": "8090 serves the experiment branch from D:Portfolio. Gates never build or replace it."
+  "liveNote": "8090 serves the experiment branch from D:/Portfolio. Gates never build or replace it."
 }
