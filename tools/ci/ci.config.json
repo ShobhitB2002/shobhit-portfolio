@@ -1,6 +1,6 @@
 {
   "project": "portfolio",
-  "branches": { "production": "main", "integration": "integration", "taskPattern": "task/*" },
+  "branches": { "production": "production", "integration": "integration", "taskPattern": "task/*" },
   "runsDir": "D:/_ci-runs/Portfolio",
   "nodeModulesSource": "D:/Portfolio/node_modules",
   "requiredDocs": ["CLAUDE.md", "docs/RULES.md", "docs/HISTORY.md", "docs/DEPLOYMENT.md"],

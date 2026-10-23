@@ -8,3 +8,8 @@
 - Added `tools/ci` (gates, hooks), `CLAUDE.md`, `docs/`.
 - Repo visibility PUBLIC was found and left unchanged (owner decision).
 - `C:\Users\Vuseia\Documents\Git\shobhit-portfolio` does not exist on this PC (not inspected further).
+
+## 2026-10-23 - branch rename main -> production (owner approved)
+- GitHub branch `main` renamed to `production` (default branch now `production`). Local `main` renamed to `production`, tracking `origin/production`. Same SHA (`d1afc27`), nothing merged into it.
+- Supersedes the 2026-10-23 entry above on the rename: the rename is done. The owner changes Vercel's production branch to `production`.
+- Gate config (`tools/ci/ci.config.json`), `CLAUDE.md`, `docs/DEPLOYMENT.md`, `docs/RULES.md` now name `production` as the release branch.
