@@ -1,25 +1,34 @@
-# Portfolio (Shobhit Bansal, iOS developer portfolio)
+# Portfolio: AI worker entry
 
-Master folder: `D:\Portfolio`. Next.js 16 (App Router), Tailwind 3. Public repo: https://github.com/ShobhitB2002/shobhit-portfolio (visibility PUBLIC; do not change without owner OK).
-
-## Read first
-- `docs/RULES.md` - working rules for this repo.
-- `docs/DEPLOYMENT.md` - gates, branches, release and PC hosting.
-- `docs/HISTORY.md` - what changed and why.
-- `D:\ForgeLoop\GENERAL_MODEL_2026-10-21.md` - general local CI/CD model for all projects.
+Next.js 16 (App Router), Tailwind 3, deployed on Vercel. Repo is PUBLIC: keep private details out. Do not change visibility.
+Career claims in README.md belong to the career chat. Do not edit them here.
 
 ## Branches
-- `production` - release branch. Renamed from `main` on 2026-10-23 (owner approved). Vercel production deploys follow it once the owner sets Vercel's production branch to `production`.
-- `integration` - combined task work; runs gate-full on push.
-- `task/<type>-<name>` - one task; runs gate-fast on push (pre-push hook).
-- `experiment` - checked out in `D:\Portfolio`. It is the build served on 127.0.0.1:8090. Keep it as-is.
-- Other branches (`claude_revamp`, `feature_*`): kept untouched.
+- `production`: official site. Vercel production follows it. Merge only with owner go-ahead; a merge is the release go-ahead. Never commit to it directly.
+- `integration`: staging for the official site. Push runs gate-full.
+- `experiment`: separate experimental build, checked out in `D:\Portfolio`, served privately. Never merge it into `integration` or `production` without explicit owner approval.
+- `task/<type>-<name>`: one task, cut from `integration`. Push runs gate-fast. Merge into `integration` after it passes.
 
 ## Ports and PC hosting
-8090 (127.0.0.1) is this app, served by `next start` through the scheduled task "Portfolio PC Server" (`C:\Users\Vuseia\portfolio-pc-start.vbs`). Tailscale Serve (tailnet only, not Funnel): `https://vuseia-pc.tail535e2b.ts.net:10000` -> 8090. Do not change ports or Tailscale without the owner. Port table: `C:\Users\Vuseia\.claude\CLAUDE.md`.
+- 8090 (127.0.0.1): `experiment` build (`npm run start:pc`), scheduled task "Portfolio PC Server". Tailnet only: `https://vuseia-pc.tail535e2b.ts.net:10000`.
+- Never run `npm run build` in `D:\Portfolio` while 8090 is up: it rewrites the `.next` the server reads. Gates build in a scratch export.
+- Never kill or re-bind 8090 except through the scheduled task. Port table: `C:\Users\Vuseia\.claude\CLAUDE.md`.
 
 ## Commands
-- `npm run dev` - local dev server (not for 8090).
-- `powershell -ExecutionPolicy Bypass -File tools\ci\gate-fast.ps1` / `gate-full.ps1` - run gates by hand.
-- `powershell -ExecutionPolicy Bypass -File tools\ci\install-hooks.ps1` - install hooks in this clone.
-- Never run `npm run build` inside `D:\Portfolio` while 8090 is up: it rewrites the `.next` the server reads. Gates build in a scratch export.
+- Gates (by hand): `powershell -ExecutionPolicy Bypass -File tools\ci\gate-fast.ps1` or `gate-full.ps1`.
+- Install hooks (shared by all worktrees): `powershell -ExecutionPolicy Bypass -File tools\ci\install-hooks.ps1`.
+- Local dev: `npm run dev` (not on 8090).
+
+## Hard rules
+- Checks run locally. GitHub Actions are disabled. Do not add workflow files.
+- Never bypass hooks (`--no-verify`), force-push, or rewrite pushed history.
+- No secrets, keys, `.env*` or `.vercel` in git.
+- Do not delete files: move them to `D:\_quarantine\<date>-portfolio\` with a MANIFEST.csv.
+- Do not change site content, app counts or career claims without owner OK.
+
+## Docs
+- `README.md`: public, for humans.
+- `docs/DEPLOYMENT.md`: gates, release, PC hosting, backups.
+- `docs/BACKLOG.md`: open items. Update it when an item changes.
+- `docs/DECISIONS.md`: non-obvious decisions and traps, one dated line each. No per-task log (git has it).
+- Model: `D:\ForgeLoop\GENERAL_MODEL_2026-10-21.md`.

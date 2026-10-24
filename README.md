@@ -104,4 +104,4 @@ npm run start    # Serve build locally
 
 ---
 
-*Last updated: October 2025*
+*Last updated: October 2026*
